@@ -17,6 +17,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - WebAssembly page with Golang
 - Email stuff with DMARC/SPF and other stuff no one really understands.
 - gRPC
+- OData (e.g. with [godata](https://github.com/crestonbunch/godata))
 
 ### Overall Challenge
 
