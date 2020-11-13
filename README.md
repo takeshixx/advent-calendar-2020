@@ -18,6 +18,10 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - Email stuff with DMARC/SPF and other stuff no one really understands.
 - gRPC
 
+### Overall Challenge
+
+We should have an overall challenge where users can win something. E.g. the first one to solve everything is able to decrypt a secret, which could be a gift card like last time. We shouldn't use RSA keys to encrypt the secret this time...
+
 ## Agenda
 
 | Port | Challenge | Path |
