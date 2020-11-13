@@ -20,6 +20,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - OData (e.g. with [godata](https://github.com/crestonbunch/godata))
 - Oauth flow https://www.ory.sh/run-oauth2-server-open-source-api-security/
 - ASN.1 (https://golang.org/pkg/encoding/asn1/)
+- DNS over JSON (https://www.rfc-archive.org/getrfc?rfc=8427&tag=Representing-DNS-Messages-in-JSON)
 
 ### Overall Challenge
 
