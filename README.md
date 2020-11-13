@@ -22,6 +22,12 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - ASN.1 (https://golang.org/pkg/encoding/asn1/)
 - DNS over JSON (https://www.rfc-archive.org/getrfc?rfc=8427&tag=Representing-DNS-Messages-in-JSON)
 - Concise Binary Object Representation (CBOR) https://tools.ietf.org/html/rfc7049 https://github.com/hildjj/node-cbor
+- GitHub Actions
+  - Provide some code with a simple vulnerability, something that might be hard to compile (maybe in a weird programming language)
+  - Users have to createa a GitHub Action that builds that code (without the vuln) and upload the binary as artifact
+  - Allow users to submit a link to their build artifact
+  - Create a own GitHub action that fetches the build artifact, runs it and checks if the vuln is still in there (restrict to GitHub URL)
+  - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
 
 ### Overall Challenge
 
