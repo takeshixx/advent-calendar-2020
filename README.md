@@ -12,6 +12,7 @@ A CTF-like advent calendar that opens a port everyday, starting from port 1. The
 - RFC7231: Build a crawler with the From header.
 - WebAssembly page with Golang
 - Email stuff with DMARC/SPF and other stuff no one really understands.
+- gRPC
 
 ## Agenda
 
