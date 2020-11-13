@@ -33,6 +33,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - Diameter Protokoll (http://www.freediameter.net/trac/)
 - Websockets
 - HSZF(DoIP)/UDS
+- ELF binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
 
 ### Overall Challenge
 
