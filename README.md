@@ -30,6 +30,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
   - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
 - DTLS 1.2
 - Webshop Race Conditions (Vouchers ausstellen)
+- Diameter Protokoll
 
 ### Overall Challenge
 
