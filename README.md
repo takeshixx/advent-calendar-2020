@@ -18,6 +18,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - Email stuff with DMARC/SPF and other stuff no one really understands.
 - gRPC
 - OData (e.g. with [godata](https://github.com/crestonbunch/godata))
+- Oauth flow https://www.ory.sh/run-oauth2-server-open-source-api-security/
 
 ### Overall Challenge
 
