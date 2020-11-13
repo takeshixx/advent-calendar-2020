@@ -4,7 +4,7 @@ ELF binary with wrong entry point. If entry point is set to the correct one, the
 
 ## Running
 
-``bash
+```bash
 docker build -t dayxx_SLE .
 sudo docker run -dit -p xx:80 dayxx_SLE
-``
+```
