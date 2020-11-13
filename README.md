@@ -17,6 +17,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - WebAssembly page with Golang
 - Email stuff with DMARC/SPF and other stuff no one really understands.
 - gRPC
+- WebRTC (Servers send image, have to build the client)
 - OData (e.g. with [godata](https://github.com/crestonbunch/godata))
 - Oauth flow https://www.ory.sh/run-oauth2-server-open-source-api-security/
 - ASN.1 (https://golang.org/pkg/encoding/asn1/)
