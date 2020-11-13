@@ -11,6 +11,7 @@ A CTF-like advent calendar that opens a port everyday, starting from port 1. The
 - RFC2965: Implement webapp that requires Cookie2 HTTP header.
 - RFC7231: Build a crawler with the From header.
 - WebAssembly page with Golang
+- Email stuff with DMARC/SPF and other stuff no one really understands.
 
 ## Agenda
 
