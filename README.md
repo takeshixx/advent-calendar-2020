@@ -32,7 +32,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - Webshop Race Conditions (Vouchers ausstellen)
 - Diameter Protokoll (http://www.freediameter.net/trac/)
 - Websockets
-- HSZF/UDS
+- HSZF(DoIP)/UDS
 
 ### Overall Challenge
 
