@@ -28,6 +28,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
   - Allow users to submit a link to their build artifact
   - Create a own GitHub action that fetches the build artifact, runs it and checks if the vuln is still in there (restrict to GitHub URL)
   - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
+- DTLS 1.2
 
 ### Overall Challenge
 
