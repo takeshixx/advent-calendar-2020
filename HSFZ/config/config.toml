@@ -1,0 +1,16 @@
+title = "UDS Fuzzer Example"
+
+[gateway]
+host = "0.0.0.0"
+port = 6801
+ssl = false
+timeout = 5 # seconds to wait when the device dropped connection
+connection_max = 5000
+enabled = true
+socketTimeout = 0.05
+transmissionGap = 0.002
+waitForResponse = 0.2
+logfile = "communication.log" # Logs all communication
+file_loglevel = 20 # LOGLEVEL: 10 = DEBUG, 20 = INFO, 30 = Warning, 40 = Error, 50 = Critical
+stdout_loglevel = 12 # LOGLEVEL: 10 = DEBUG, 20 = INFO, 30 = Warning, 40 = Error, 50 = Critical
+timeout_counter = 8
