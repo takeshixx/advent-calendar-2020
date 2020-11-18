@@ -12,5 +12,7 @@ RUN cd dtls && git apply /advent.patch && go build -o /server examples/listen/se
 ENV SECRET replacemeplease
 
 EXPOSE 4444/udp
+
+HEALTHCHECK --interval=60s --timeout=10s --retries=3 CMD openssl s_client -dtls1_2 -connect 127.0.0.1:4444 || exit 1
+
 ENTRYPOINT /server
-#ENTRYPOINT python2.7 /server.py
