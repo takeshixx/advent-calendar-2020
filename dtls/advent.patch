@@ -12,7 +12,7 @@ index 2df4ac4..4faf9be 100644
  	// Generate a certificate and private key to secure the connection
  	certificate, genErr := selfsign.GenerateSelfSigned()
 diff --git a/examples/util/hub.go b/examples/util/hub.go
-index ad8e597..8bd71b6 100644
+index ad8e597..92f4e4d 100644
 --- a/examples/util/hub.go
 +++ b/examples/util/hub.go
 @@ -27,7 +27,8 @@ func (h *Hub) Register(conn net.Conn) {
@@ -20,7 +20,7 @@ index ad8e597..8bd71b6 100644
  
  	h.conns[conn.RemoteAddr().String()] = conn
 -
-+	var flag string = os.Getenv("SECRET")
++	flag := fmt.Sprintf("Secret: %s", os.Getenv("SECRET"))
 +	conn.Write([]byte(flag))
  	go h.readLoop(conn)
  }
