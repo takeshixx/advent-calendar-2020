@@ -1,0 +1,44 @@
+diff --git a/examples/listen/selfsign/main.go b/examples/listen/selfsign/main.go
+index 2df4ac4..4faf9be 100644
+--- a/examples/listen/selfsign/main.go
++++ b/examples/listen/selfsign/main.go
+@@ -14,7 +14,7 @@ import (
+ 
+ func main() {
+ 	// Prepare the IP to connect to
+-	addr := &net.UDPAddr{IP: net.ParseIP("127.0.0.1"), Port: 4444}
++	addr := &net.UDPAddr{IP: net.ParseIP("0.0.0.0"), Port: 4444}
+ 
+ 	// Generate a certificate and private key to secure the connection
+ 	certificate, genErr := selfsign.GenerateSelfSigned()
+diff --git a/examples/util/hub.go b/examples/util/hub.go
+index ad8e597..8bd71b6 100644
+--- a/examples/util/hub.go
++++ b/examples/util/hub.go
+@@ -27,7 +27,8 @@ func (h *Hub) Register(conn net.Conn) {
+ 	defer h.lock.Unlock()
+ 
+ 	h.conns[conn.RemoteAddr().String()] = conn
+-
++	var flag string = os.Getenv("SECRET")
++	conn.Write([]byte(flag))
+ 	go h.readLoop(conn)
+ }
+ 
+diff --git a/examples/util/util.go b/examples/util/util.go
+index 8f53539..5b0c65c 100644
+--- a/examples/util/util.go
++++ b/examples/util/util.go
+@@ -67,10 +67,10 @@ func Check(err error) {
+ 		}
+ 
+ 		fmt.Printf("net.Error: %v\n", err)
+-		panic(err)
++		//panic(err)
+ 	default:
+ 		fmt.Printf("error: %v\n", err)
+-		panic(err)
++		//panic(err)
+ 	}
+ }
+ 
