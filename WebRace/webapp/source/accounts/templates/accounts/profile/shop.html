@@ -1,0 +1,22 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+    <h4>{% trans 'Shop' %}</h4>
+
+    <form method="post">
+
+        {% csrf_token %}
+        <a>Want to buy the secret for just 100 Bucks?</a><br>
+        {% if request.user.profile.money >= 100 %}
+        <button class="btn btn-success">{% trans 'Gimme!' %}</button>
+        {% else %}
+        <span class="label label-danger">Crap! To poor! you only have {{ request.user.profile.money }} Bucks</span>
+        {% endif %}
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+    <h4>{% trans 'Redeem Voucher' %}</h4>
+
+    <form method="post">
+
+        {% csrf_token %}
+        <a>Want to redeem your ONE TIME 20 Bucks Voucher?</a>
+        <button class="btn btn-success">{% trans 'Redeem Voucher' %}</button>
+
+    </form>
+
+{% endblock %}
