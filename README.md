@@ -41,6 +41,10 @@ Each task should run in a Docker container, similar to the previous [iteration](
 
 We should have an overall challenge where users can win something. E.g. the first one to solve everything is able to decrypt a secret, which could be a gift card like last time. We shouldn't use RSA keys to encrypt the secret this time...
 
+### HealthState
+
+Healthstate can be monitored with ``docker events --filter event=health_status``
+
 ## Agenda
 
 | Port | Challenge | Path |

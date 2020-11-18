@@ -13,6 +13,6 @@ ENV SECRET replacemeplease
 
 EXPOSE 4444/udp
 
-HEALTHCHECK --interval=60s --timeout=10s --retries=3 CMD echo "Q" | openssl s_client -dtls1_2 -connect 127.0.0.1:4444 2>/dev/null | grep 'Secret:' || exit 1
+HEALTHCHECK --interval=900s --timeout=10s --retries=3 CMD echo "Q" | openssl s_client -dtls1_2 -connect 127.0.0.1:4444 2>/dev/null | grep 'Secret:' || exit 1
 
 ENTRYPOINT /server
