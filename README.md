@@ -29,13 +29,13 @@ Each task should run in a Docker container, similar to the previous [iteration](
   - Allow users to submit a link to their build artifact
   - Create a own GitHub action that fetches the build artifact, runs it and checks if the vuln is still in there (restrict to GitHub URL)
   - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
-- [x] DTLS 1.2
+- [x] [DTLS 1.2](dtls/)
 - [ ] TLS 1.3
 - [ ] Webshop Race Conditions (Vouchers ausstellen)
 - [ ] Diameter Protokoll (http://www.freediameter.net/trac/)
 - [ ] Websockets
-- [x] HSZF(DoIP)/UDS
-- [x] ELF binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
+- [x] [HSZF(DoIP)/UDS](HSFZ/)
+- [x] [ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
 
 ### Overall Challenge
 
