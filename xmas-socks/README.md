@@ -6,8 +6,8 @@ xmas-socks is a simple portable parallel secure SOCKS server written in Go.
 
 This is the most secure SOCKS proxy server ever to protect the XMAS socks:
 
-![XMAS Socks](permitted/sock.png)
-![XMAS Socks](permitted/sock.png)
+![XMAS Socks (This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license; Source: https://commons.wikimedia.org/wiki/File:Sock_icon.png)](permitted/sock.png)
+![XMAS Socks (This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license; Source: https://commons.wikimedia.org/wiki/File:Sock_icon.png)](permitted/sock.png)
 
 Only source IPs allowed in the access control list can get the SOCKS.
 
