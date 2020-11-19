@@ -9,7 +9,7 @@ This is the most secure SOCKS proxy server ever to protect the XMAS socks:
 ![XMAS Socks](permitted/sock.png)
 ![XMAS Socks](permitted/sock.png)
 
-Only servers allowed in the access control list can get the SOCKS.
+Only source IPs allowed in the access control list can get the SOCKS.
 
 ## Build with Docker
 
