@@ -32,6 +32,10 @@ type addressRewriter struct {
 
 func (addressRewriter) Rewrite(ctx context.Context, request *socks5.Request) (context.Context, *socks5.AddrSpec) {
 	log.Printf("Connection from %v\n", request.RemoteAddr.IP)
+	if request.DestAddr.IP.IsLoopback() && request.DestAddr.Port == port {
+		// Allow direct access to SOCKS proxy
+		return ctx, request.DestAddr
+	}
 	if request.RemoteAddr.IP.IsLoopback() {
 		return ctx, &socks5.AddrSpec{IP: net.IPv4(127, 0, 0, 1), Port: httpAuthorizedPort}
 	}

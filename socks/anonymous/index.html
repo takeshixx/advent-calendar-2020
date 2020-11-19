@@ -54,9 +54,12 @@
 	<div id="debug">
 		
 		<pre>Debug info:
-[ACL List]
-Deny from all
-Allow from 127.0.0.1/8</pre>
+[PROXY ACL]
+DST any:any
+	Deny from all
+	Allow from 127.0.0.1/8
+DST 127.0.0.1:9000
+	Allow from all</pre>
 	</div>
 </body>
 </html>
