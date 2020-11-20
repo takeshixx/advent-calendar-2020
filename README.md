@@ -36,6 +36,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - [ ] Websockets
 - [x] [HSZF(DoIP)/UDS](HSFZ/)
 - [x] [ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
+- [ ] PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka)
 
 ### Overall Challenge
 
