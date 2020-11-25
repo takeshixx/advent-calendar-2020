@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Advent Calendar of Advanced Cyber Fun 2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="pygmentize-default.css" />
+
+    <style type="text/css">
+	body {
+        color: white;
+		font-size: 20px;
+		font-family: monospace;
+        background: url(img/bg.jpg);
+        background-repeat: repeat; 
+        font-family: 'Roboto Mono';
+	}
+	h1,h2 {
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 0 40px 3px white, 0 0 40px 3px white;
+        border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 15px;
+	}
+    h2 {
+        font-size: 25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .blinking {
+        animation: blinking 1s linear infinite;
+    }
+    @keyframes blinking {
+        50% {
+            opacity: 0;
+        }
+    }
+    a, a:visited, a:active {
+        color: #CC231E;
+        text-decoration: none !important;
+    }
+    a:hover {
+        color: #F5624D;
+    }
+	.content {
+		width: 1000px;
+		min-height: 600px;
+		border: 3px ridge rgba(128,128,128,0.4);
+		margin: 0 auto;
+        background: rgb(0, 56, 46);
+        box-shadow: 0 0 40px 3px white, 0 0 40px 3px white;
+        border-radius: 10px;
+        opacity: 0.9;
+	}
+	.dumbtext {
+		padding: 10px 55px;
+	}
+    .list {
+        padding: 0 100px 0 100px;
+    }
+    .list li {
+        padding-bottom: 20px;
+    }
+    .calendar {
+        min-height: 100%;
+        padding: 10px 75px 0 75px;
+    }
+    .calendar tr td {
+        padding-bottom: 65px;
+    }
+    .calendar tr td:first-child {
+        text-align: center;
+        font-weight: bold;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+    .calendar tr td:first-child div {
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .calendar tr td:first-child span img {
+        width: 90px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .calendar tr td:first-child span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .num {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: #3C8D0D;
+    }
+    h4 {
+        font-weight: normal;
+        font-size: 18px;
+        padding: 0;
+        margin: 25px 0 0 40px;
+        text-align: center;
+    }
+    .description {
+        margin: 0 0 0 40px;
+    }
+    .additional {
+        margin: 10px 0 0 40px;
+    }
+    .hints {
+        display: none;
+        line-height: 175%;
+        border: 1px solid rgba(60,141,13,0.7);
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #378b29;
+    }
+    .voucher {
+        background: rgb(90, 0, 0);
+        padding-top: 20px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+        padding-left: 55px;
+    }
+    .code {
+        background: rgb(90, 0, 0);
+        margin-left: 40px;
+        padding: 20px 20px 0 20px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+    }
+    .highlight pre {
+        margin: 0;
+    }
+    .center {
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    </style>
+    <script src="snowstorm.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div class="content">
+    <h1 class="blinking">Advent Calendar of Advanced Cyber Fun  2020</h1>
+
+    <p class="dumbtext">Ho ho ho! Welcome to the advent calendar of advanced cyber fun, 2020 edition. Everyday we will open one port until the 24th of December, starting from port 1. It is up to you fellas to explore what Santa is up to!</p>
+
+    <p class="dumbtext">Santa likes to play around with exotic protocols and weird technology. Have fun trying to use his services!</p>
+
+    <h2>Let the fun begin!</h2>
+
+    <table class="calendar">
+        <tbody>
+            <tr id="day01">
+                <td><div></div><span><img src="img/1.png" alt="day1"/> 1/TCP</span></td>
+                <td>
+                    <p class="description">Example description</p>
+                    <p class="additional">Additional description</p>
+                </td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+    <h2 id="challenge">The Challenge</h2>
+
+    <p class="dumbtext">
+    This year we have a challenge where you can win an <a href="https://www.amazon.com/" target="_blank">Amazon</a> gift card worth <b>24,12€</b>! How to get the gift card is encrypted in the following message:
+    </p>
+    <pre class="voucher">
+
+    </pre>
+
+    <p class="dumbtext">
+    The key is hidden in the 24 ports, one part per port. Each port will print a 48 byte Base64 encoded strings that have to be decoded and concatenated with all the other 24 strings. The <b>SHA256</b> sum of all 24 decoded and concatenated strings is the key. <a href="https://kleber.io/hSz6MFk" target="_blank">Here</a> is an example how to decode the key.
+    </p>
+
+    <p class="dumbtext">
+    After decoding the key, the message can be decrypted like this:
+    </p>
+
+    <div class="code">
+    <div class="highlight"><pre><span>openssl enc <span class="se">\</span>
+    -aes-256-cbc <span class="se">\</span>
+    -d <span class="se">\</span>
+    -in message.enc.b64 <span class="se">\</span>
+    -a <span class="se">\</span>
+    -iv <span class="m">01020304050607</span> <span class="se">\</span>
+    -K 57d9026946ca391833158e8d9fe6fdfe9b715e5dfe6fdfe9
+        </pre></div>
+    </div>
+
+
+    <p class="dumbtext">
+    Good luck to everyone and have a nice XMAS 2020!
+    </p>
+
+    <h2 id="about">Wat?!</h2>
+
+    <p class="dumbtext">All ports are located on <b>xmas.rip</b> ranging from 1 to 24. All other ports and hosts are not part of this Christmas fun (unless the description contains another specific port)! Please refer to the description of each day about what protocols you may need to speak. Talking to Santa might get harder over time! Based on feedback there might be hints for the more complicated challenges.</p>
+
+    <p class="dumbtext">Thanks to technical advances in Christmasland, Santa's miraculous Christmas adventure supports</p>
+    <ul class="list">
+        <li><b>IPv6</b>: Most (probably even all) ports will support IPv6. Exotic ports without IPv6 support will have a hint in the corresponding description.</li>
+        <li><b>TLS</b>: Thanks to <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a> Santa can securely distribute the miracles of Christmas. However, Santa intentionally disabled HSTS, so you can try and fail to connect to the ports with your browser.</li>
+    </ul>
+
+    <h2 id="contact">Further information</h2>
+
+    <ul class="list">
+        <li>
+            Send your Christmas greetings to <b>advent [AT] adversec [DOT] com</b>.
+        </li>
+        <li>This page has been created by: 
+            <ul>
+                <li><a href="https://twitter.com/_takeshix" target="_blank">@_takeshix</a></li>
+                <li><a href="https://twitter.com/lod108" target="_blank">@lod108</a></li>
+                <li><a href="https://twitter.com/br3zel" target="_blank">@br3zel</a></li>
+                <li><a href="https://twitter.com/sven_to" target="_blank">@sven_to</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+<!-- Thanks to all the authors of the amazing XMAS ASCII arts! https://asciiart.website/index.php?art=holiday/christmas/other http://ascii.co.uk/art/xmas -->
+<!-- Kudos to Steve Lianardo for the awesome Christmas icons! http://www.iconarchive.com/show/free-christmas-flat-icons-by-stevelianardo.html -->
+
+</body>
+</html>
