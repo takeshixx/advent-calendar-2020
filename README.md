@@ -1,6 +1,6 @@
 # Advent Calendar of Advanced Cyber Fun
 
-Ideas for the 2020 edition
+The 2020 edition with even more cyber fun. Wow!
 
 ## Intro
 
@@ -12,8 +12,8 @@ Each task should run in a Docker container, similar to the previous [iteration](
 
 ## Ideas
 
-- [ ] RFC2965: Implement webapp that requires Cookie2 HTTP header.
-- [ ] RFC7231: Build a crawler with the From header.
+- [ ] [RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.
+- [ ] [RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header.
 - [ ] WebAssembly page with Golang
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
 - [ ] gRPC
@@ -50,6 +50,8 @@ Healthstate can be monitored with ``docker events --filter event=health_status``
 
 ## Agenda
 
+First one or two ports should be fairly simple to give participants an easy start. The bold days are 2nd to 4th advents (1st is not in december this year) and they should have special challenges (harder/more complex).
+
 | Port | Challenge | Path |
 | ---- | --------- | ---- |
 | 1    | | []()
@@ -57,21 +59,21 @@ Healthstate can be monitored with ``docker events --filter event=health_status``
 | 3    | | []()
 | 4    | | []()
 | 5    | | []()
-| 6    | | []()
+| **6**   | | []()
 | 7    | | []()
 | 8    | | []()
 | 9    | | []()
 | 10    | | []()
 | 11    | | []()
 | 12    | | []()
-| 13    | | []()
+| **13**    | | []()
 | 14    | | []()
 | 15    | | []()
 | 16    | | []()
 | 17    | | []()
 | 18    | | []()
 | 19    | | []()
-| 20    | | []()
+| **20**    | | []()
 | 21    | | []()
 | 22    | | []()
 | 23    | | []()
