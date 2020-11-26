@@ -9,6 +9,14 @@ A webserver that runs on two ports, supporting obsolete `Set-Cookie2` and `Cooki
 Everybody loves christmas cookies! The best ones are freshly backed, but the old ones may do as well. Even if there SHOULD NOT be used anymore because their <a href="https://tools.ietf.org/html/rfc2965">receipes</a> are deprecated!
 ```
 
+## Solution
+
+Go to port 1 to get the `Set-Cookie2` header with the secret and then send it to port 11111:
+
+```
+curl -H "Cookie2: supasdersecretstuffhere" localhost:9999
+```
+
 # Building & Running
 
 ```
