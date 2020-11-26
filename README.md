@@ -56,7 +56,7 @@ First one or two ports should be fairly simple to give participants an easy star
 
 | Port | Challenge | Path |
 | ---- | --------- | ---- |
-| 1    | | [xmas-cookie2](xmas-cookie2)
+| 1    | A challenge that opens two web ports, port 1 returns a `Set-Cookie2` header with a port list that includes 11111. Send cookie to this port in `Cookie2` header according to [RFC2965](https://tools.ietf.org/html/rfc2965). | [xmas-cookie2](xmas-cookie2)
 | 2    | | [dtls](dtls)
 | 3    | | [ELF](elf)
 | 4    | | [xmas-socks](xmas-socks)
