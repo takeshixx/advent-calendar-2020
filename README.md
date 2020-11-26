@@ -57,11 +57,11 @@ First one or two ports should be fairly simple to give participants an easy star
 | Port | Challenge | Path |
 | ---- | --------- | ---- |
 | 1    | | [xmas-cookie2](xmas-cookie2)
-| 2    | | []()
-| 3    | | []()
-| 4    | | []()
+| 2    | | [dtls](dtls)
+| 3    | | [ELF](elf)
+| 4    | | [xmas-socks](xmas-socks)
 | 5    | | []()
-| **6**   | | []()
+| **6**   | | [XMAS Cloud](http://svento-xmascloud.azurewebsites.net/)
 | 7    | | []()
 | 8    | | []()
 | 9    | | []()
