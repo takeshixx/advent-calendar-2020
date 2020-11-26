@@ -14,7 +14,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 
 ## Ideas
 
-- [ ] [RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.
+- [x] [RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.
 - [ ] [RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header.
 - [ ] WebAssembly page with Golang
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
@@ -56,7 +56,7 @@ First one or two ports should be fairly simple to give participants an easy star
 
 | Port | Challenge | Path |
 | ---- | --------- | ---- |
-| 1    | | []()
+| 1    | | [xmas-cookie2](xmas-cookie2)
 | 2    | | []()
 | 3    | | []()
 | 4    | | []()
