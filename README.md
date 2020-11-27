@@ -40,7 +40,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - [x] [ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
 - [ ] PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka)
 - [x] [xmas-socks](xmas-socks)
-- [x] [XMAS Cloud](http://svento-xmascloud.azurewebsites.net/)
+- [x] [XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)
 
 ### Overall Challenge
 
@@ -61,7 +61,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 3    | | [ELF](elf)
 | 4    | | [xmas-socks](xmas-socks)
 | 5    | | []()
-| **6**   | | [XMAS Cloud](http://svento-xmascloud.azurewebsites.net/)
+| **6**   | | [XMAS Cloud](xmas-cloud/)
 | 7    | | []()
 | 8    | | []()
 | 9    | | []()
