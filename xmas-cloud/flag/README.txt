@@ -1,0 +1,1 @@
+The flags is encrypted with the secure XMAS cryptor tool to improve security. Secrets stored securely in the XMAS CLOUD JavaScript Engine.

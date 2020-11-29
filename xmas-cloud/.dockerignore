@@ -1,0 +1,5 @@
+node_modules
+./xmas-cloud
+./cryptor/cryptor
+Dockerfile
+docker-compose.yml
