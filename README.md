@@ -41,6 +41,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - [ ] PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka)
 - [x] [xmas-socks](xmas-socks)
 - [x] [XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)
+- [x] [xmas-proto](xmas-proto/): The xmas-proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).
 
 ### Overall Challenge
 

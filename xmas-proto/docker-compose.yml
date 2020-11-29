@@ -1,0 +1,10 @@
+version: '3'
+services:
+  xmas-proto:
+    build: .
+    read_only: true
+    volumes:
+      - ./flag.txt:/app/flag.txt:ro
+    ports:
+      # HOST:CONTAINER
+      - "443:8443"
