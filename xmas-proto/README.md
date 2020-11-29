@@ -20,7 +20,7 @@ Add flag to ``flag.txt``.
 docker-compose up --build
 ```
 
-The sock server is exposed on TCP port 443.
+The TLS server is exposed on TCP port 443. You can change it in the ``docker-compose.yml`` file.
 
 ## Build without Docker
 

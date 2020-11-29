@@ -16,7 +16,7 @@ Add flag to ``flag.txt`` and run:
 docker-compose up --build
 ```
 
-The sock server is exposed on TCP port 6. You can change it in the ``docker-compose.yml``. The compose file adding a few hardening measurements to the container (e.g. read-only FS). Avoid running the server without those measurements. ;-) Internet access might be possible [1]. However, I don't know any way to exploit it.
+The HTTP server is exposed on TCP port 6. You can change it in the ``docker-compose.yml`` file. The compose file adding a few hardening measurements to the container (e.g. read-only FS). Avoid running the server without those measurements. ;-) Internet access might be possible [1]. However, I don't know any way to exploit it.
 
 [1] You can restrict Internet access, too, [configuring a Network](https://docs.docker.com/compose/networking/) and (iptables restrictions](https://stackoverflow.com/a/64464693)
 
