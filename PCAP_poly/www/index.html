@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>XMAS.rip Santa Operations Center</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="pygmentize-default.css" />
+
+    <style type="text/css">
+	body {
+        color: white;
+		font-size: 20px;
+		font-family: monospace;
+        background: url(img/bg.jpg);
+        background-repeat: repeat; 
+        font-family: 'Roboto Mono';
+	}
+	h1,h2 {
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 0 40px 3px #f5624d, 0 0 40px 3px #f5624d;
+        background-color: #CC231E;
+        border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 15px;
+	}
+    h2 {
+        font-size: 25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .blinking {
+        animation: blinking 1s linear infinite;
+    }
+    @keyframes blinking {
+        50% {
+            opacity: 0;
+        }
+    }
+    a, a:visited, a:active {
+        color: #F5624D;
+        text-decoration: none !important;
+    }
+    a:hover {
+        color: #CC231E;
+    }
+	.content {
+		width: 1000px;
+		min-height: 600px;
+		border: 3px ridge rgba(128,128,128,0.4);
+		margin: 0 auto;
+        background: #235E6F;
+        box-shadow: 0 0 40px 3px #34A65F, 0 0 40px 3px #34A65F;
+        border-radius: 10px;
+        opacity: 0.9;
+	}
+	.dumbtext {
+		padding: 10px 55px;
+	}
+    .list {
+        padding: 0 100px 0 100px;
+    }
+    .list li {
+        padding-bottom: 20px;
+    }
+    .calendar {
+        min-height: 100%;
+        padding: 10px 75px 0 75px;
+    }
+    .calendar tr td {
+        padding-bottom: 65px;
+    }
+    .calendar tr td:first-child {
+        text-align: center;
+        font-weight: bold;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+    .calendar tr td:first-child div {
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .calendar tr td:first-child span img {
+        width: 90px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .calendar tr td:first-child span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .num {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: #3C8D0D;
+    }
+    h4 {
+        font-weight: normal;
+        font-size: 18px;
+        padding: 0;
+        margin: 25px 0 0 40px;
+        text-align: center;
+    }
+    .description {
+        margin: 0 0 0 40px;
+    }
+    .additional {
+        margin: 10px 0 0 40px;
+    }
+    .hints {
+        display: none;
+        line-height: 175%;
+        border: 1px solid rgba(60,141,13,0.7);
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #378b29;
+    }
+    .voucher {
+        background: #0c6e4c;
+        padding-top: 20px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+        padding-left: 55px;
+    }
+    .code {
+        background:#0c6e4c;
+        margin-left: 40px;
+        padding: 20px 20px 0 20px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+    }
+    .highlight pre {
+        margin: 0;
+    }
+    .center {
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    </style>
+    <script src="snowstorm.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div class="content">
+    <h1 class="blinking">Santa Operations Center</h1>
+
+    <p class="dumbtext">Santas diligent helpers received non-xmas communication from the future(pcapng) in the Santa Operations Center (SOC). Apparently the grinch is going to send a file to Santas XMAS service causing a POLYGLOTAL problem on 24th of December. 
+        Santas investigators need your help! Can you FIND and EXTRACT the file grinch send to the XMAS SERVICE and inspect its contents...? </p>
+
+    <center><a href="investigate.pcapng">DOWNLOAD</a></center>
+
+</div>
+
+
+
+<!-- Thanks to all the authors of the amazing XMAS ASCII arts! https://asciiart.website/index.php?art=holiday/christmas/other http://ascii.co.uk/art/xmas -->
+<!-- Kudos to Steve Lianardo for the awesome Christmas icons! http://www.iconarchive.com/show/free-christmas-flat-icons-by-stevelianardo.html -->
+
+</body>
+</html>
