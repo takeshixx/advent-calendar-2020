@@ -9,7 +9,7 @@ RUN git clone https://github.com/pion/dtls.git
 
 RUN cd dtls && git apply /advent.patch && go build -o /server examples/listen/selfsign/main.go
 
-ENV SECRET replacemeplease
+ENV SECRET jnPpJf9enmLDJkaOhLTJ1Y3tn8lQpXjM
 
 EXPOSE 4444/udp
 
