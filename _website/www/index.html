@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
-    <title>Advent Calendar of Advanced Cyber Fun 2018</title>
+    <title>Advent Calendar of Advanced Cyber Fun 2020 - COVID Edition</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="pygmentize-default.css" />
 
@@ -169,10 +169,10 @@
     <table class="calendar">
         <tbody>
             <tr id="day01">
-                <td><div></div><span><img src="img/1.png" alt="day1"/> 1/TCP</span></td>
+                <td><div></div><span><img src="img/1.png" alt="day1"/> 1/...</span></td>
                 <td>
-                    <p class="description">Example description</p>
-                    <p class="additional">Additional description</p>
+                    <p class="description">Coming Soon!</p>
+                    <p class="additional"></p>
                 </td>
             </tr>
 
@@ -184,31 +184,50 @@
     <h2 id="challenge">The Challenge</h2>
 
     <p class="dumbtext">
-    This year we have a challenge where you can win an <a href="https://www.amazon.com/" target="_blank">Amazon</a> gift card worth <b>24,12€</b>! How to get the gift card is encrypted in the following message:
+    This year we have a challenge where you can win an <a href="https://www.amazon.com/" target="_blank">Amazon</a> gift card worth <b>24,12€</b>! Instructions on how to get the gift card are in the following encrypted message:
     </p>
-    <pre class="voucher">
 
+    <pre class="voucher">
+43qfwRmADPGnCA5ECIHo/zhBw2ZGxr9jSVaMaPioNwRHyQAQ83heDxCbpl6nLYoG
+IrcdXwzmG3mjxQtIiRINH0A2UfNYuMpRLy38Wf3EcqlU8fFwXL1b6kJ1qkMMZ4QT
+Pt0299NuT28+6rz0Ut/FjjVGvL9sv4Gv3LKcDTHMfMyk4xXigxIf25FvcvKopgiq
+IU04m4XLW96S72HLTvS1DoiCe2QjByMcOn8+t4lCM4IHyGmsjOPnmQrojC8+wmAH
+9+PaMnNA4JKCdj3rY02NRS1BT6lDSD9930IU+Vn2hxz3ZgyAmdKThiHLkUkJI+Oi
     </pre>
 
     <p class="dumbtext">
-    The key is hidden in the 24 ports, one part per port. Each port will print a 48 byte Base64 encoded strings that have to be decoded and concatenated with all the other 24 strings. The <b>SHA256</b> sum of all 24 decoded and concatenated strings is the key. <a href="https://kleber.io/hSz6MFk" target="_blank">Here</a> is an example how to decode the key.
-    </p>
+    The key is hidden in the 24 ports, one part per port. Each port will print a 32 byte string which have to be concatenated and hashed with SHA256 to get the AES key. Here is an example how to generate the password:
+
+
+            <pre class="voucher">
+#!/usr/bin/env python3
+import hashlib
+
+with open('tokens') as f:
+    tokens = f.read()
+    
+h = hashlib.sha256()
+
+for token in tokens.split('\n'):
+    h.update(token.encode())
+
+print('password: ', h.hexdigest())
+            </pre>
+
 
     <p class="dumbtext">
     After decoding the key, the message can be decrypted like this:
     </p>
 
-    <div class="code">
-    <div class="highlight"><pre><span>openssl enc <span class="se">\</span>
-    -aes-256-cbc <span class="se">\</span>
-    -d <span class="se">\</span>
-    -in message.enc.b64 <span class="se">\</span>
-    -a <span class="se">\</span>
-    -iv <span class="m">01020304050607</span> <span class="se">\</span>
-    -K 57d9026946ca391833158e8d9fe6fdfe9b715e5dfe6fdfe9
-        </pre></div>
-    </div>
-
+    <pre class="voucher">
+openssl enc \
+    -aes-256-cbc \
+    -d \
+    -in message.enc.b64 \
+    -a \
+    -iv 01020304050607 \
+    -K b7f5070cee395922b6dcabb679fc60a556df0de52a7221fac3e7873ea4f36dcc
+    </pre>
 
     <p class="dumbtext">
     Good luck to everyone and have a nice XMAS 2020!
