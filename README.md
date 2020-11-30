@@ -42,6 +42,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 - [x] [xmas-socks](xmas-socks)
 - [x] [XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)
 - [x] [proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).
+- [ ] [WireGuard](https://www.wireguard.com/)
 
 ### Overall Challenge
 
