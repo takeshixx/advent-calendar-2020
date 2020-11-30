@@ -6,7 +6,7 @@ The 2020 edition with even more cyber fun. Wow!
 
 A CTF-like advent calendar that opens a port everyday, starting from port 1. The challenges incorporate different protocols and services ranging from ancient RFCs to bleeding edge technologies. Each port is meant to be solvable rather easily so that it doesn't take too much time.
 
-The 2020 edition of the advent calendar was hosted at `xmas.rip`. The page contents are in the [website](website) directory.
+The 2020 edition of the advent calendar was hosted at `xmas.rip`. The page contents are in the [_website](_website) directory.
 
 ## Prerequisites
 
