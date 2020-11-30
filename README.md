@@ -48,7 +48,9 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 
 ### Overall Challenge
 
-We should have an overall challenge where users can win something. E.g. the first one to solve everything is able to decrypt a secret, which could be a gift card like last time. We shouldn't use RSA keys to encrypt the secret this time...
+The overall challenge will include an Amazon gift card again. Each port has a secret, the SHA256 hash of all secrets combined will be the password for an encrypted text on the website that includes instructions for receiving the gift card. Unfortunately we cannot just include the code of a gift card, because e.g. German gift cards won't work for Amazon Canada.
+
+All keys are available at [_challenge/keys.json](_challenge/keys.json), the password in [_challenge/password](_challenge/password). Both have been generated with the [_challenge/generate_keys.py](_challenge/generate_keys.py) script.
 
 ### HealthState
 
