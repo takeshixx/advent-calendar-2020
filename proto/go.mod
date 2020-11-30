@@ -1,4 +1,4 @@
-module github.com/takeshixx/advent-calendar-2020/xmas-proto
+module github.com/takeshixx/advent-calendar-2020/proto
 
 go 1.15
 

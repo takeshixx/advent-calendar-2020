@@ -1,6 +1,6 @@
 version: '3'
 services:
-  xmas-proto:
+  proto:
     build: .
     read_only: true
     volumes:

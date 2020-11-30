@@ -12,8 +12,8 @@ var tlsCommonName string
 var flagPath string
 
 var rootCmd = &cobra.Command{
-	Use:   "xmas-proto",
-	Short: "xmas-proto server.",
+	Use:   "proto",
+	Short: "A custom TLS server written in go.",
 	Run:   startServer,
 }
 

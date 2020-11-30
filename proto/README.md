@@ -1,10 +1,10 @@
-# xmas-proto
+# proto
 
 A custom TLS server written in go.
 
 ## Description
 
-**SPOILER:** The xmas-proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).
+**SPOILER:** The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).
 
 ## Build with Docker
 
@@ -41,12 +41,12 @@ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 
 Print usage:
 ```bash
-./xmas-proto --help
+./proto --help
 ```
 
 Start server:
 ```bash
-./xmas-proto
+./proto
 ```
 
 ## Solution
