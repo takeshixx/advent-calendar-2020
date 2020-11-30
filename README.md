@@ -17,7 +17,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 Tick the boxes to indicate the service has been implemented. Strikethrough text means challenge is already on the agenda.
 
 - [x] ~~[RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.~~
-- [x] [RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header. ([xmas-from](xmas-from))
+- [x] ~~[RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header. ([xmas-from](xmas-from))~~
 - [ ] WebAssembly page with Golang
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
 - [ ] gRPC
@@ -63,12 +63,12 @@ First one or two ports should be fairly simple to give participants an easy star
 | 1    | A challenge that opens two web ports, port 1 returns a `Set-Cookie2` header with a port list that includes 11111. Send cookie to this port in `Cookie2` header according to [RFC2965](https://tools.ietf.org/html/rfc2965). | [xmas-cookie2](xmas-cookie2)
 | 2    | A simple DTLv1.2 server that returns the secret. | [dtls](dtls)
 | 3    | ELF binary with wrong entry point. If entry point is set to the correct one, the flag is printed. Binary is provided via web server. | [ELF](elf)
-| 4    | | [xmas-socks](xmas-socks)
-| 5    | | [proto](proto)
+| 4    | xmas-socks is a simple portable parallel secure SOCKS server written in Go. | [xmas-socks](xmas-socks)
+| 5    | A custom TLS server written in Go that returns the flag if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation). | [proto](proto)
 | **6**   | | [XMAS Cloud](xmas-cloud/)
 | 7    | | []()
 | 8    | | [HSFZ](HSFZ)
-| 9    | | []()
+| 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
 | 10    | | []()
 | 11    | | []()
 | 12    | | []()
