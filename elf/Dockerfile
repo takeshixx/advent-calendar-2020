@@ -4,7 +4,7 @@ RUN apt-get update -y
 RUN apt-get install -y python3 python3-pip wget
 RUN pip3 install lief
 
-ENV SECRET replacemeplease
+ENV SECRET HNj8I5HDSEWh64EJ2VNzkOcPKfRaDbXs
 
 COPY ./elf.py /
 RUN python3 /elf.py $SECRET
