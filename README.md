@@ -17,7 +17,7 @@ Each task should run in a Docker container, similar to the previous [iteration](
 Tick the boxes to indicate the service has been implemented. Strikethrough text means challenge is already on the agenda.
 
 - [x] ~~[RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.~~
-- [x] [RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header. ([xnas-from](xmas-from))
+- [x] [RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header. ([xmas-from](xmas-from))
 - [ ] WebAssembly page with Golang
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
 - [ ] gRPC
@@ -33,17 +33,17 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
   - Allow users to submit a link to their build artifact
   - Create a own GitHub action that fetches the build artifact, runs it and checks if the vuln is still in there (restrict to GitHub URL)
   - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
-- [x] [DTLS 1.2](dtls/)
+- [x] ~~[DTLS 1.2](dtls/)~~
 - [ ] TLS 1.3
 - [ ] Webshop Race Conditions (Vouchers ausstellen)
 - [ ] Diameter Protokoll (http://www.freediameter.net/trac/)
 - [ ] Websockets
-- [x] [HSZF(DoIP)/UDS](HSFZ/)
-- [x] [ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)
+- [x] ~~[HSZF(DoIP)/UDS](HSFZ/)~~
+- [x] ~~[ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)~~
 - [ ] PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka)
-- [x] [xmas-socks](xmas-socks)
-- [x] [XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)
-- [x] [proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).
+- [x] ~~[xmas-socks](xmas-socks)~~
+- [x] ~~[XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)~~
+- [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
 - [ ] [WireGuard](https://www.wireguard.com/)
 
 ### Overall Challenge
