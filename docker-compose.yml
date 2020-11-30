@@ -8,4 +8,4 @@ services:
       - "443:443"
     restart: always
     volumes:
-      - /etc/letsencrypt:/usr/local/etc/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
