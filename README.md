@@ -68,7 +68,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 4    | xmas-socks is a simple portable parallel secure SOCKS server written in Go. | [xmas-socks](xmas-socks)
 | 5    | A custom TLS server written in Go that returns the flag if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation). | [proto](proto)
 | **6**   | | [XMAS Cloud](xmas-cloud/)
-| 7    | | []()
+| 7    | Polyglot file (TBD) | []()
 | 8    | | [HSFZ](HSFZ)
 | 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
 | 10    | | []()
