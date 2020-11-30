@@ -11,5 +11,5 @@ sudo docker build --tag advent-website .
 ## Running
 
 ```bash
-sudo docker run --restart=always -v /etc/letsencrypt:/usr/local/etc/letsencrypt advent-website
+sudo docker run -d --restart=always -v /etc/letsencrypt:/etc/letsencrypt -p 80:80 -p 443:443 --name website advent-website
 ```

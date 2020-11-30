@@ -18,7 +18,8 @@
 	h1,h2 {
         text-align: center;
         font-size: 30px;
-        box-shadow: 0 0 40px 3px white, 0 0 40px 3px white;
+        box-shadow: 0 0 40px 3px #f5624d, 0 0 40px 3px #f5624d;
+        background-color: #CC231E;
         border-radius: 10px;
         margin-left: 25px;
         margin-right: 25px;
@@ -38,19 +39,19 @@
         }
     }
     a, a:visited, a:active {
-        color: #CC231E;
+        color: #F5624D;
         text-decoration: none !important;
     }
     a:hover {
-        color: #F5624D;
+        color: #CC231E;
     }
 	.content {
 		width: 1000px;
 		min-height: 600px;
 		border: 3px ridge rgba(128,128,128,0.4);
 		margin: 0 auto;
-        background: rgb(0, 56, 46);
-        box-shadow: 0 0 40px 3px white, 0 0 40px 3px white;
+        background: #235E6F;
+        box-shadow: 0 0 40px 3px #34A65F, 0 0 40px 3px #34A65F;
         border-radius: 10px;
         opacity: 0.9;
 	}
@@ -120,14 +121,14 @@
         background-color: #378b29;
     }
     .voucher {
-        background: rgb(90, 0, 0);
+        background: #0c6e4c;
         padding-top: 20px;
         font-family: "Courier New", Courier, monospace;
         font-size: 15px;
         padding-left: 55px;
     }
     .code {
-        background: rgb(90, 0, 0);
+        background:#0c6e4c;
         margin-left: 40px;
         padding: 20px 20px 0 20px;
         font-family: "Courier New", Courier, monospace;
@@ -196,7 +197,7 @@ IU04m4XLW96S72HLTvS1DoiCe2QjByMcOn8+t4lCM4IHyGmsjOPnmQrojC8+wmAH
     </pre>
 
     <p class="dumbtext">
-    The key is hidden in the 24 ports, one part per port. Each port will print a 32 byte string which have to be concatenated and hashed with SHA256 to get the AES key. Here is an example how to generate the password:
+    The key is hidden in the 24 ports, one part per port. Each port will contain a 32 byte string, each has to be concatenated and hashed with SHA256 to get the AES key. Here is an example how to generate the key:
 
 
             <pre class="voucher">
@@ -211,7 +212,7 @@ h = hashlib.sha256()
 for token in tokens.split('\n'):
     h.update(token.encode())
 
-print('password: ', h.hexdigest())
+print('key: ', h.hexdigest())
             </pre>
 
 
@@ -260,6 +261,7 @@ openssl enc \
     </ul>
 
 </div>
+
 <!-- Thanks to all the authors of the amazing XMAS ASCII arts! https://asciiart.website/index.php?art=holiday/christmas/other http://ascii.co.uk/art/xmas -->
 <!-- Kudos to Steve Lianardo for the awesome Christmas icons! http://www.iconarchive.com/show/free-christmas-flat-icons-by-stevelianardo.html -->
 
