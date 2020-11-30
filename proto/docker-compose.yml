@@ -1,10 +1,10 @@
 version: '3'
 services:
-  socks:
+  proto:
     build: .
     read_only: true
     volumes:
-      - ./flag.txt:/app/permitted/flag.txt:ro
+      - ./flag.txt:/app/flag.txt:ro
     ports:
       # HOST:CONTAINER
-      - "4:9000"
+      - "443:8443"

@@ -1,0 +1,9 @@
+{
+  "name": "xmas-cloud",
+  "version": "0.0.1",
+  "author": "Sven Nobis",
+  "license": "ISC",
+  "dependencies": {
+    "monaco-editor": "^0.21.2"
+  }
+}

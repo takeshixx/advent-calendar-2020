@@ -1,0 +1,31 @@
+
+html, body {
+    font-family: sans-serif;
+    background-color: #1e1e1e;
+    color: rgb(231, 231, 231);
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+div#main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+div#info {
+    text-transform: uppercase;
+    font-size: 12px;
+    border-top: 1px solid rgb(60, 60, 60);
+    padding: 5px;
+    flex: 0 1 auto;
+}
+
+div#editor {
+    flex: 1 1 auto;
+}
+
+div#output {
+    flex: 0 1 250px;
+}

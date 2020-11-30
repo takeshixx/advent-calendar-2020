@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    image: advent-website
+    container_name: advent-website
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt

@@ -1,0 +1,29 @@
+version: '3'
+services:
+  xmas-cloud:
+    build: .
+    read_only: true
+    volumes:
+      - ./flag:/flag:ro
+      - type: tmpfs
+        target: /sys
+        tmpfs:
+          size: 0
+    ports:
+      # HOST:CONTAINER
+      - "6:8080"
+    cap_drop:
+      - NET_RAW
+      - NET_BIND_SERVICE
+      - AUDIT_WRITE
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+      - FSETID
+      - KILL
+      - MKNOD
+      - SETFCAP
+      - SETGID
+      - SETPCAP
+      - SETUID
+      - SYS_CHROOT
