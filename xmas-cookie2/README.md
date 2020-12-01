@@ -14,7 +14,7 @@ Everybody loves christmas cookies! The best ones are freshly backed, but the old
 Go to port 1 to get the `Set-Cookie2` header with the secret and then send it to port 11111:
 
 ```
-curl -H "Cookie2: supasdersecretstuffhere" localhost:9999
+curl -H "Cookie2: XMAS=supersecretstuffhere" xmas.rip:11111
 ```
 
 # Building & Running
@@ -26,5 +26,5 @@ sudo docker build --tag day01 .
 Run a test instance:
 
 ```
-sudo docker run -it -p 8888:1 -p 9999:11111 day01
+sudo docker run -d --restart=always -p 1:1 -p 11111:11111 --name day01 day01
 ```
