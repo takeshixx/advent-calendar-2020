@@ -40,7 +40,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [ ] Websockets
 - [x] ~~[HSZF(DoIP)/UDS](HSFZ/)~~
 - [x] ~~[ELF](elf/) binary with wrong entry point. Prints the flag if entry point is corrected (see ELF folder)~~
-- [x]  [PCAP_poly](PCAP_poly) PCAP File containg a Polyglot file containing the flag
+- [x] ~~[PCAP_poly](PCAP_poly) PCAP File containg a Polyglot file containing the flag~~
 - [x] ~~[xmas-socks](xmas-socks)~~
 - [x] ~~[XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)~~
 - [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
