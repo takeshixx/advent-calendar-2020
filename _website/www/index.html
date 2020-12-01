@@ -45,15 +45,25 @@
     a:hover {
         color: #CC231E;
     }
+    @-webkit-keyframes fade {  
+        0% { background-color: #235E6F;; }
+        25% { background-color: #0F8A5F;; }
+        50% { background-color: #34A65F;; }
+        75% { background-color: #CC231E;; }
+        100% { background-color: #f55d46;; }
+    }
 	.content {
 		width: 1000px;
 		min-height: 600px;
 		border: 3px ridge rgba(128,128,128,0.4);
 		margin: 0 auto;
-        background: #235E6F;
-        box-shadow: 0 0 40px 3px #34A65F, 0 0 40px 3px #34A65F;
+        background-color: #235E6F;;
+        -webkit-animation-name: fade;  
+        -webkit-animation-iteration-count: infinite;  
+        -webkit-animation-duration: 13s; 
+        box-shadow: 0 0 40px 3px black, 0 0 40px 3px black;
         border-radius: 10px;
-        opacity: 0.9;
+        opacity: 0.97777;
 	}
 	.dumbtext {
 		padding: 10px 55px;
@@ -169,6 +179,7 @@
 
     <table class="calendar">
         <tbody>
+
             <tr id="day01">
                 <td><div></div><span><img src="img/1.png" alt="day1"/> 1/TCP</span></td>
                 <td>
@@ -176,8 +187,6 @@
                     <p class="additional"></p>
                 </td>
             </tr>
-
-
 
         </tbody>
     </table>
