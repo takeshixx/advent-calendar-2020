@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nginx:
+  website:
     image: advent-website
     container_name: advent-website
     ports:
@@ -9,3 +9,22 @@ services:
     restart: always
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
+  day01:
+    image: day01
+    container_name: day01
+    ports:
+      - "1:1"
+      - "11111:11111"
+    restart: always
+  day02:
+    image: day02
+    container_name: day02
+    ports:
+      - "2:2"
+    restart: always
+  day03:
+    image: day03
+    container_name: day03
+    ports:
+      - "3:3"
+    restart: always
