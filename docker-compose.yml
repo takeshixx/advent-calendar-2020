@@ -20,7 +20,7 @@ services:
     image: day02
     container_name: day02
     ports:
-      - "2:2"
+      - "2:4444/udp"
     restart: always
   day03:
     image: day03
