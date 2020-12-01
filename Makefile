@@ -6,3 +6,9 @@ web-up: web-build
 
 run:
 	sudo docker-compose up -d
+
+day01-build:
+	sudo docker build --tag day01 -f xmas-cookie2/Dockerfile xmas-cookie2
+
+day01-up: day01-build
+	sudo docker save day01 | pv | ssh xmas sudo docker load
