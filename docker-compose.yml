@@ -16,15 +16,30 @@ services:
       - "1:1"
       - "11111:11111"
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -H \"Cookie2: XMAS=supersecretstuffhere\" localhost:11111 | grep -q \"Here we go\" || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
   day02:
     image: day02
     container_name: day02
     ports:
       - "2:4444/udp"
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "echo \"Q\" | openssl s_client -dtls1_2 -connect localhost:4444 2>/dev/null | grep -q \"Secret:\" || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
   day03:
     image: day03
     container_name: day03
     ports:
       - "3:3"
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "wget http://localhost:80/elf -O /tmp/elf || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
