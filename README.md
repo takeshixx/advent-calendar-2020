@@ -45,6 +45,8 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)~~
 - [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
 - [ ] [WireGuard](https://www.wireguard.com/)
+- [ ] Server which requires to send specific UTF16 strings with correct BOM
+- [ ] Something with emojis
 
 ### Overall Challenge
 
