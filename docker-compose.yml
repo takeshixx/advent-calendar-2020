@@ -9,6 +9,7 @@ services:
     restart: always
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
+      - /home/ubuntu/logs/website:/srv/logs
   day01:
     image: day01
     container_name: day01
