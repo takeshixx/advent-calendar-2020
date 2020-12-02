@@ -4,6 +4,9 @@ web-build:
 web-up: web-build
 	sudo docker save advent-website | pv | ssh xmas sudo docker load
 
+web: web-up
+	ssh xmas "sudo docker-compose stop website && sudo docker-compose up -d website"
+
 run:
 	sudo docker-compose up -d
 
