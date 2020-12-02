@@ -32,6 +32,7 @@ services:
       interval: 1m30s
       timeout: 10s
       retries: 3
+    tty: true
   day03:
     image: day03
     container_name: day03
