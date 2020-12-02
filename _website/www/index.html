@@ -135,6 +135,16 @@
         padding: 10px;
         background-color: #378b29;
     }
+    .changelog {
+        font-size: 14px;
+        display: none;
+        line-height: 175%;
+        border: 1px solid #021d22;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #968c36;
+        box-shadow: 0 0 25px 3px rgb(41, 41, 41), 0 0 25px 3px  rgb(41, 41, 41);
+    }
     .voucher {
         background: #0c6e4c;
         padding-top: 20px;
@@ -190,6 +200,13 @@
                 <td>
                     <p class="description">Everybody loves christmas cookies! The best ones are freshly backed, but the old ones may do as well. Even if they SHOULD NOT be used anymore because their <a href="https://tools.ietf.org/html/rfc2965">receipes</a> are deprecated!</p>
                     <p class="additional"></p>
+
+                    <h4><a href="#/" onclick="toggle_visibility('changelog1');">Changelog</a></h4>
+                    <div id="changelog1" class="additional changelog">
+                        <ul>
+                            <li><i>01.12.2020</i>: Added descriptive error message & minor value checking change</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
 
@@ -198,6 +215,13 @@
                 <td>
                     <p class="description">Routing of Christmas presents requires secure transport, from the north pole to your living room. On a long journey, Santa has to do a lot of handshakes with several third parties to establish new connections. But because of COVID, Santa has to avoid handshakes all the way to stay healthy. Otherwise, Santa won't be able to sniff who made the best Christmas cookies.</p>
                     <p class="additional">Santa and helpers still have to provide secure services, so they started using a secure, yet unknown for most protocol on today's service they said is similar to TLS...?</p>
+
+                    <h4><a href="#/" onclick="toggle_visibility('changelog2');">Changelog</a></h4>
+                    <div id="changelog2" class="additional changelog">
+                        <ul>
+                            <li><i>02.12.2020</i>: UDP packet spamming bug fixed</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
 
