@@ -38,10 +38,21 @@ services:
     image: day03
     container_name: day03
     ports:
-      - "3:3"
+      - "3:80"
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "wget http://localhost:80/elf -O /tmp/elf || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+  day04:
+    image: day04
+    container_name: day04
+    ports:
+      - "4:9000"
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "/proxy.sh socks5 localhost 9000 curl --socks5 localhost:9000 localhost:9000/flag.txt | grep -q JAHr7BBNh0fp3IlbC2DItfWOV0CYIj3J || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 3

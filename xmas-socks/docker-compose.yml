@@ -3,8 +3,6 @@ services:
   socks:
     build: .
     read_only: true
-    volumes:
-      - ./flag.txt:/app/permitted/flag.txt:ro
     ports:
       # HOST:CONTAINER
       - "4:9000"

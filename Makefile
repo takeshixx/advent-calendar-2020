@@ -30,3 +30,9 @@ day03-build:
 
 day03-up: day03-build
 	sudo docker save day03 | pv | ssh xmas sudo docker load
+
+day04-build:
+	sudo docker build --tag day04 -f xmas-socks/Dockerfile xmas-socks
+
+day04-up: day04-build
+	sudo docker save day04 | pv | ssh xmas sudo docker load
