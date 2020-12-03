@@ -39,6 +39,14 @@ day04-up: day04-build
 
 
 
+day06-build:
+	sudo docker build --tag day06 -f xmas-cloud/Dockerfile xmas-cloud
+
+day06-up: day06-build
+	sudo docker save day06 | pv | ssh xmas sudo docker load
+	scp -r xmas-cloud/flag xmas:data/day06/
+
+
 day10-build:
 	sudo docker build --tag day10 -f redstar/Dockerfile redstar
 
