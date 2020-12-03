@@ -37,7 +37,11 @@ day04-build:
 day04-up: day04-build
 	sudo docker save day04 | pv | ssh xmas sudo docker load
 
+day05-build:
+	sudo docker build --tag day05 -f proto/Dockerfile proto
 
+day05-up: day05-build
+	sudo docker save day05 | pv | ssh xmas sudo docker load
 
 day06-build:
 	sudo docker build --tag day06 -f xmas-cloud/Dockerfile xmas-cloud
