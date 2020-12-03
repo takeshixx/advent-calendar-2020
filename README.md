@@ -47,6 +47,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [ ] [WireGuard](https://www.wireguard.com/)
 - [ ] Server which requires to send specific UTF16 strings with correct BOM
 - [ ] Something with emojis
+- [x] ~~Image with Red Star OS watermark that includes the flag~~
 
 ### Overall Challenge
 
@@ -73,7 +74,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 7    | PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka). | [PCAP_poly](PCAP_poly)
 | 8    | | [HSFZ](HSFZ)
 | 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
-| 10    | | []()
+| 10    | A JPG file with a Red Star OS watermark that includes the flag. | [redstar](redstar)
 | 11    | | []()
 | 12    | | []()
 | **13**    | | []()

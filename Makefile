@@ -36,3 +36,11 @@ day04-build:
 
 day04-up: day04-build
 	sudo docker save day04 | pv | ssh xmas sudo docker load
+
+
+
+day10-build:
+	sudo docker build --tag day10 -f redstar/Dockerfile redstar
+
+day10-up: day10-build
+	sudo docker save day10 | pv | ssh xmas sudo docker load
