@@ -4,6 +4,8 @@ The overall challenge is a gift card that the first user to get all Ports will r
 
 The key can be rebuilt with the [rebuild_key.py](rebuild_key.py) script with all tokens in a file separate by newlines.
 
+`hashs.json` includes the SHA256 hashs of everyday's tokens. These are used on the website to allow users to verify that they have the proper token.
+
 ## Challenge Text
 
 ```
