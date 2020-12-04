@@ -169,6 +169,26 @@
         margin-right: auto;
         width: 50%;
     }
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(90deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75% {
+            transform: rotate(270deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .titleimg:hover {
+        animation: spinner 1s linear infinite;
+    }
     </style>
     <script src="snowstorm.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -196,7 +216,7 @@
         <tbody>
 
             <tr id="day01">
-                <td><div></div><span><img src="img/1.png" alt="day1"/> 1/TCP</span></td>
+                <td><div></div><span><img src="img/1.png" alt="day1" title="8067f25ec426bd62ceac98a0796058a666ed3b47581f1cf85d96e7ef63298dfb" class="titleimg" /> 1/TCP</span></td>
                 <td>
                     <p class="description">Everybody loves christmas cookies! The best ones are freshly backed, but the old ones may do as well. Even if they SHOULD NOT be used anymore because their <a href="https://tools.ietf.org/html/rfc2965">receipes</a> are deprecated!</p>
                     <p class="additional"></p>
@@ -211,7 +231,7 @@
             </tr>
 
             <tr id="day02">
-                <td><div></div><span><img src="img/2.png" alt="day2"/> 2/UDP</span></td>
+                <td><div></div><span><img src="img/2.png" alt="day2" title="cd5d26282691ce13a27e5d5881e96e2331ce58febf89c045aa47529f003d330c" class="titleimg" /> 2/UDP</span></td>
                 <td>
                     <p class="description">Routing of Christmas presents requires secure transport, from the north pole to your living room. On a long journey, Santa has to do a lot of handshakes with several third parties to establish new connections. But because of COVID, Santa has to avoid handshakes all the way to stay healthy. Otherwise, Santa won't be able to sniff who made the best Christmas cookies.</p>
                     <p class="additional">Santa and helpers still have to provide secure services, so they started using a secure, yet unknown for most protocol on today's service they said is similar to TLS...?</p>
@@ -226,10 +246,19 @@
             </tr>
 
             <tr id="day03">
-                <td><div></div><span><img src="img/3.png" alt="day3"/> 3/TCP</span></td>
+                <td><div></div><span><img src="img/3.png" alt="day3" title="33191399083768ef0d543e52d023581bf87abb7347646b633083b7713f7b4ee4" class="titleimg" /> 3/TCP</span></td>
                 <td>
                     <p class="description">Santa's little elf has so much to do and doesn't know where to start. He tried to clean up the dead beef that somehow piles up. Santa told him to replace it with 0x1050, but he doesn't know what that means...</p>
                     <p class="additional">Go browse <a href="http://xmas.rip:3">today's port</a>  to help Santa's little elf!</p>
+                </td>
+            </tr>
+
+            <tr id="day04">
+                <td><div></div><span><img src="img/4.png" alt="day4" title="d74e3f9b85425e983c62b2d39ad58eaf22d0bbc9cfcc4c588abfba7d402a52bb" class="titleimg" /> 4/TCP</span></td>
+                <td>
+                    <p class="description">During winter it gets very cold, in some places it might even snow! Therefore, Santa always keeps on his warm SOCKS, sometimes up to 5 SOCKS. Strangely he also wears them to access today's port. Unknown sources tried to access it as well, but it is not supposed to be accessible from the outside world.
+                    </p>
+                    <p class="additional">Can you get into the service? Maybe try to put on your SOCKS as well.</p>
                 </td>
             </tr>
 
