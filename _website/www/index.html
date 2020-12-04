@@ -189,6 +189,11 @@
     .titleimg:hover {
         animation: spinner 1s linear infinite;
     }
+    .qa {
+        font-size: 35px;
+        font-weight: bolder;
+        font-family: Cursive;
+    }
     </style>
     <script src="snowstorm.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -206,7 +211,7 @@
 <div class="content">
     <h1 class="blinking">Advent Calendar of Advanced Cyber Fun  2020</h1>
 
-    <p class="dumbtext">Ho ho ho! Welcome to the advent calendar of advanced cyber fun, 2020 edition. Everyday we will open one port until the 24th of December, starting from port 1. It is up to you fellas to explore what Santa is up to!</p>
+    <p class="dumbtext">Ho ho ho! Welcome to the advent calendar of advanced cyber fun, 2020 edition. Every day, we will open one port until the 24th of December, starting from port 1. It is up to you fellas to explore what Santa is up to!</p>
 
     <p class="dumbtext">Santa likes to play around with exotic protocols and weird technology. Have fun trying to use his services!</p>
 
@@ -218,7 +223,7 @@
             <tr id="day01">
                 <td><div></div><span><img src="img/1.png" alt="day1" title="8067f25ec426bd62ceac98a0796058a666ed3b47581f1cf85d96e7ef63298dfb" class="titleimg" /> 1/TCP</span></td>
                 <td>
-                    <p class="description">Everybody loves christmas cookies! The best ones are freshly backed, but the old ones may do as well. Even if they SHOULD NOT be used anymore because their <a href="https://tools.ietf.org/html/rfc2965">receipes</a> are deprecated!</p>
+                    <p class="description">Everybody loves Christmas cookies! The best ones are freshly backed, but the old ones may do as well. Even if they SHOULD NOT be used anymore because their <a href="https://tools.ietf.org/html/rfc2965">recipes</a> are deprecated!</p>
                     <p class="additional"></p>
 
                     <h4><a href="#/" onclick="toggle_visibility('changelog1');">Changelog</a></h4>
@@ -256,7 +261,7 @@
             <tr id="day04">
                 <td><div></div><span><img src="img/4.png" alt="day4" title="d74e3f9b85425e983c62b2d39ad58eaf22d0bbc9cfcc4c588abfba7d402a52bb" class="titleimg" /> 4/TCP</span></td>
                 <td>
-                    <p class="description">During winter it gets very cold, in some places it might even snow! Therefore, Santa always keeps on his warm SOCKS, sometimes up to 5 SOCKS. Strangely he also wears them to access today's port. Unknown sources tried to access it as well, but it is not supposed to be accessible from the outside world.
+                    <p class="description">During winter, it gets very cold, in some places it might even snow! Therefore, Santa always keeps on his warm SOCKS, sometimes up to 5 SOCKS. Strangely he also wears them to access today's port. Unknown sources tried to access it as well, but it is not supposed to be accessible from the outside world.
                     </p>
                     <p class="additional">Can you get into the service? Maybe try to put on your SOCKS as well.</p>
                 </td>
@@ -317,34 +322,60 @@ openssl enc \
     Good luck to everyone and have a nice XMAS 2020!
     </p>
 
+
     <h2 id="about">Wat?!</h2>
 
     <p class="dumbtext">All ports are located on <b>xmas.rip</b> ranging from 1 to 24. All other ports and hosts are not part of this Christmas fun (unless the description contains another port or it is very obvious from the service itself)! Please refer to the description of each day about what protocols you may need to speak. Talking to Santa might get harder over time! Based on feedback there might be hints for the more complicated challenges.</p>
 
-    <p class="dumbtext">Thanks to technical advances in Christmasland, Santa's miraculous Christmas adventure supports</p>
+    <p class="dumbtext">Thanks to technical advances in Christmas land, Santa's miraculous Christmas adventure supports</p>
     <ul class="list">
         <li><b>IPv6</b>: Most (probably even all) ports will support IPv6. Exotic ports without IPv6 support will have a hint in the corresponding description.</li>
         <li><b>TLS</b>: Thanks to <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a> Santa can securely distribute the miracles of Christmas. However, Santa intentionally disabled HSTS, so you can try and fail to connect to the ports with your browser.</li>
     </ul>
 
-    <h2 id="contact">Further information</h2>
-
+    <p class="dumbtext">Further information: </p>
     <ul class="list">
-        <li>
-            This page and all the ports will be online until 26th of December 2020. Around the same time all the code and configuration files will be published on GitHub, similar to the <a href="https://github.com/takeshixx/advent-calendar-2018">2018 edition</a>.
-        </li>
         <li>
             Send your Christmas greetings to <b>advent [AT] adversec [DOT] com</b>.
         </li>
-        <li  style="padding-bottom: 5px;">This page has been created by: 
-            <ul>
-                <li style="padding-bottom: 5px;"><a href="https://twitter.com/_takeshix" target="_blank">@_takeshix</a></li>
-                <li style="padding-bottom: 5px;"><a href="https://twitter.com/lod108" target="_blank">@lod108</a></li>
-                <li style="padding-bottom: 5px;"><a href="https://twitter.com/br3zel" target="_blank">@br3zel</a></li>
-                <li style="padding-bottom: 5px;"><a href="https://twitter.com/sven_to" target="_blank">@sven_to</a></li>
-            </ul>
-        </li>
     </ul>
+
+    <p class="dumbtext">This page has been created by: </p>
+    <ul class="list">
+        <li style="padding-bottom: 5px;"><a href="https://twitter.com/_takeshix" target="_blank">@_takeshix</a></li>
+        <li style="padding-bottom: 5px;"><a href="https://twitter.com/lod108" target="_blank">@lod108</a></li>
+        <li style="padding-bottom: 5px;"><a href="https://twitter.com/br3zel" target="_blank">@br3zel</a></li>
+        <li style="padding-bottom: 5px;"><a href="https://twitter.com/sven_to" target="_blank">@sven_to</a></li>
+    </ul>
+
+    <h2 id="about">FAQ</h2>
+
+    <p class="dumbtext"><span class="qa">Q</span> : How long will the Advent Calendar of Advanced Cyber Fun 2020 be online?</p>
+    <p class="dumbtext"><span class="qa">A</span> : The page and all ports will be online until 26th of December 2020.</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : Will you publish the code?</p>
+    <p class="dumbtext"><span class="qa">A</span> : Yes, all code and configuration files will be published on GitHub, similar to the <a href="https://github.com/takeshixx/advent-calendar-2018">2018 edition</a>.</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : A port seems to be unreachable, what should I do?</p>
+    <p class="dumbtext"><span class="qa">A</span> : Sometimes there might be delays or short periods where ports might not be accessible. Please stay calm and try it later. In case something is down too long, feel free to reach out to us!</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : Did I get the right token, in the right format?</p>
+    <p class="dumbtext"><span class="qa">A</span> : Tokens can be checked by hovering over each day's, which will display the SHA256 hash of the corresponding token.</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : Did something change on a port?</p>
+    <p class="dumbtext"><span class="qa">A</span> : In case we change something on a port (fixing a bug, making it easier/harder, etc.), we will add a change log to the corresponding port. All changes will be included there.</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : One of the ports is way to hard, I don't get it. What should I do?</p>
+    <p class="dumbtext"><span class="qa">A</span> : The harder and more complex ports will get hints in case it's too hard to solve them until the end. However, the ports are meant to be more or less easily solvable without spending hours or days to solve them.</p>
+    <hr />
+
+    <p class="dumbtext"><span class="qa">Q</span> : This website is horrible, it uses way to much CPU. Can you please fix this?</p>
+    <p class="dumbtext"><span class="qa">A</span> : No, this is not a bug, it's a feature. During winter time it gets very cold, keep this open in your browser to turn your computer in to a powerful fan heater!</p>
 
 </div>
 
