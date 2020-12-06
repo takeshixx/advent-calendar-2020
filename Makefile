@@ -50,6 +50,12 @@ day06-up: day06-build
 	sudo docker save day06 | pv | ssh xmas sudo docker load
 	scp -r xmas-cloud/flag xmas:data/day06/
 
+day07-build:
+	sudo docker build --tag day07 -f PCAP_poly/Dockerfile PCAP_poly
+
+day07-up: day07-build
+	sudo docker save day07 | pv | ssh xmas sudo docker load
+
 
 day10-build:
 	sudo docker build --tag day10 -f redstar/Dockerfile redstar

@@ -69,12 +69,6 @@ services:
     ports:
       - "6:8080"
     read_only: true
-    volumes:
-      - /home/ubuntu/data/day06/flag:/flag:ro
-      - type: tmpfs
-        target: /sys
-        tmpfs:
-          size: 0
     cap_drop:
       - NET_RAW
       - NET_BIND_SERVICE
@@ -90,6 +84,12 @@ services:
       - SETPCAP
       - SETUID
       - SYS_CHROOT
+  day07:
+    image: day07
+    container_name: day07
+    ports:
+      - "7:80"
+    restart: always
   day10:
     image: day10
     container_name: day10
