@@ -1,7 +1,7 @@
 web-build:
 	sudo docker build --tag advent-website -f _website/Dockerfile _website
 
-web-up: web-build
+web-up: web-build sync
 	sudo docker save advent-website | pv | ssh xmas sudo docker load
 
 web: web-up
@@ -56,9 +56,26 @@ day07-build:
 day07-up: day07-build
 	sudo docker save day07 | pv | ssh xmas sudo docker load
 
+day08-build:
+	sudo docker build --tag day08 -f HSFZ/Dockerfile HSFZ
+
+day08-up: day08-build
+	sudo docker save day08 | pv | ssh xmas sudo docker load
+
+day09-build:
+	sudo docker build --tag day09 -f xmas-from/Dockerfile xmas-from
+
+day09-up: day09-build
+	sudo docker save day09 | pv | ssh xmas sudo docker load
 
 day10-build:
 	sudo docker build --tag day10 -f redstar/Dockerfile redstar
 
 day10-up: day10-build
 	sudo docker save day10 | pv | ssh xmas sudo docker load
+
+day11-build:
+	sudo docker build --tag day11 -f utf16bom/Dockerfile utf16bom
+
+day11-up: day11-build
+	sudo docker save day11 | pv | ssh xmas sudo docker load

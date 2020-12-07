@@ -18,7 +18,7 @@ services:
       - "11111:11111"
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "curl -H \"Cookie2: XMAS=supersecretstuffhere\" localhost:11111 | grep -q \"Here we go\" || exit 1"]
+      test: ["CMD-SHELL", "curl -H \"Cookie2: XMAS=supersecretstuffhere\" localhost:11111 | grep -q BJKFPdZ8o0Rw9dgDiv4Mb1cJ9YknSBvX || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 3
@@ -29,7 +29,7 @@ services:
       - "2:4444/udp"
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "echo \"Q\" | openssl s_client -dtls1_2 -connect localhost:4444 2>/dev/null | grep -q \"Secret:\" || exit 1"]
+      test: ["CMD-SHELL", "echo \"Q\" | openssl s_client -dtls1_2 -connect localhost:4444 2>/dev/null | grep -q jnPpJf9enmLDJkaOhLTJ1Y3tn8lQpXjM || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 3
@@ -90,9 +90,30 @@ services:
     ports:
       - "7:80"
     restart: always
+  day08:
+    image: day08
+    container_name: day08
+    ports:
+      - "8:6801"
+  day09:
+    image: day09
+    container_name: day09
+    ports:
+      - "9:8000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -H \"Referer: /christmas_market\" -H \"From: santa@xmas.rip\" localhost:8000 | grep -q JuJiWZtTTQvVjDxF6qBB6F919hKappLb || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
   day10:
     image: day10
     container_name: day10
     ports:
       - "10:80"
     restart: always
+  day11:
+    image: day11
+    container_name: day11
+    ports:
+      - "11:4444"
+  
