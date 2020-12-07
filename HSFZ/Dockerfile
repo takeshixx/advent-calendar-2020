@@ -5,7 +5,7 @@ RUN apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev bu
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --upgrade pwntools toml
 
-ENV SECRET replacemeplease
+ENV SECRET KG9RRTHhwySLpGz70S1SaURv8ALsXMnB
 
 ENV PWNLIB_NOTERM=true
 
