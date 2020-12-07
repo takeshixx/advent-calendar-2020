@@ -18,7 +18,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 
 - [x] ~~[RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.~~
 - [x] ~~[RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header.~~
-- [ ] WebAssembly page with Golang
+- [ ] WebAssembly page with Golang ([xmas-webasm](xmas-webasm))
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
 - [ ] gRPC
 - [ ] WebRTC (Servers send image, have to build the client)
@@ -45,9 +45,10 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)~~
 - [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
 - [ ] [WireGuard](https://www.wireguard.com/)
-- [ ] Server which requires to send specific UTF16 strings with correct BOM
+- [ ] Server which requires to send specific UTF16 strings with correct BOM ([utf16bom](utf16bom))
 - [ ] Something with emojis
 - [x] ~~Image with Red Star OS watermark that includes the flag~~
+- [ ] [XMAS scan](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html) port that only allows packets with FIN, PSH and URG flags set
 
 ### Overall Challenge
 
