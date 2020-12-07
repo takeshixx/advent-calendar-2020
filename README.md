@@ -45,7 +45,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[XMAS Cloud](xmas-cloud/), [Demo](http://svento-xmascloud.azurewebsites.net/)~~
 - [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
 - [ ] [WireGuard](https://www.wireguard.com/)
-- [ ] Server which requires to send specific UTF16 strings with correct BOM ([utf16bom](utf16bom))
+- [x] ~~Server which requires to send specific UTF16 strings with correct BOM ([xmas-karaoke](xmas-karaoke))~~
 - [ ] Something with emojis
 - [x] ~~Image with Red Star OS watermark that includes the flag~~
 - [ ] [XMAS scan](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html) port that only allows packets with FIN, PSH and URG flags set
@@ -76,7 +76,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 8    | High Speed Fahrzeugzugang (HSFZ) server where user's have to send a proper HSFZ packet that starts the car. | [HSFZ](HSFZ)
 | 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
 | 10    | A JPG file with a Red Star OS watermark that includes the flag. | [redstar](redstar)
-| 11    | | []()
+| 11    | A karaoke service where clients have to reflect song lyrics in the UTF encoding indicated by the returned BOM. | [xmas-karaoke](xmas-karaoke)
 | 12    | | []()
 | **13**    | | []()
 | 14    | | []()
