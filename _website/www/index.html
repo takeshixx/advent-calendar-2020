@@ -215,7 +215,14 @@
 
     <p class="dumbtext">Santa likes to play around with exotic protocols and weird technology. Have fun trying to use his services!</p>
 
-    <h2>Let the fun begin!</h2>
+    <ul class="list">
+        <li><a href="#cal">Calendar</a></li>
+        <li><a href="#challenge">Challenge</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <h2 id="cal">Let the fun begin!</h2>
 
     <table class="calendar">
         <tbody>
@@ -286,7 +293,15 @@
             <tr id="day07">
                 <td><div></div><span><img src="img/7.png" alt="day6" title="d4a61b72b672dcf11e06afe7f085bfcfd821b08611098ad42d618db3acca0a64" class="titleimg" /> 7/TCP</span></td>
                 <td>
-                    <p class="dumbtext">Santa's diligent helpers received non-xmas communication from the future, <a href="http://xmas.rip:7">Santa's Operations Center (SOC)</a>. Apparently, the Grinch is going to send a file to Santa's XMAS service causing a POLYGLOTAL problem on 24th of December. Santa's investigators need your help! Can you FIND and EXTRACT the file Grinch send to the XMAS SERVICE and inspect its contents...? </p>
+                    <p class="description">Santa's diligent helpers received non-xmas communication from the future, <a href="http://xmas.rip:7">Santa's Operations Center (SOC)</a>. Apparently, the Grinch is going to send a file to Santa's XMAS service causing a POLYGLOTAL problem on 24th of December. Santa's investigators need your help! Can you FIND and EXTRACT the file Grinch send to the XMAS SERVICE and inspect its contents...? </p>
+
+                    <h4><a href="#/" onclick="toggle_visibility('hint7');">Hints</a></h4>
+                    <div id="hint7" class="additional changelog">
+                        <ul>
+                            <li>Take a look at HTTP communications on port 24</li>
+                            <li>Wireshark and Networkminer both can extract HTTP objects from PCAPs</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
 
@@ -371,7 +386,7 @@ openssl enc \
         <li style="padding-bottom: 5px;"><a href="https://twitter.com/sven_to" target="_blank">@sven_to</a></li>
     </ul>
 
-    <h2 id="about">FAQ</h2>
+    <h2 id="faq">FAQ</h2>
 
     <p class="dumbtext"><span class="qa">Q</span> : How long will the Advent Calendar of Advanced Cyber Fun 2020 be online?</p>
     <p class="dumbtext"><span class="qa">A</span> : The page and all ports will be online until 26th of December 2020.</p>
