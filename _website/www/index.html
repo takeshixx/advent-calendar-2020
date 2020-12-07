@@ -305,6 +305,18 @@
                 </td>
             </tr>
 
+            <tr id="day08">
+                <td><div></div><span><img src="img/8.png" alt="day6" title="0aae4bee0c1d57ca7e952736fb4f94be0456667fd19367190d3268f95779d478" class="titleimg" /> 8/TCP</span></td>
+                <td>
+                    <p class="description">Since reindeer went on strike Santa fell in love with his <a href="https://www.youtube.com/watch?v=IiXEenC3Ew4">beamer</a>. But dammit, he hasn´t turned it on for quite a while and forgot where his keys are. However, due to new technological advances he can now turn his car on with an app on his phone because of direct access to the ECUs via the Internet!</p>
+
+                    <p class="additional">His car was explicitly built for him, and he suspects the ignition sequence has something to do with XMAS! But all this protocol weirdness is too much for him to handle. Santa first discovered that the ignition ECU accepts <a href="https://scapy.readthedocs.io/en/latest/api/scapy.contrib.automotive.uds.html">UDS</a> <a href="https://automotive.softing.com/fileadmin/sof-files/pdf/de/ae/poster/UDS_Faltposter_softing2016.pdf">messages</a>. However, since it is a beamer, this message is not wrapped by DoIP but rather by <a href="https://scapy.readthedocs.io/en/latest/api/scapy.contrib.automotive.bmw.hsfz.html">High-Speed-Fahrzeug-Zugang (HSFZ)</a>.</p>
+                        
+                    <p class="additional">Santa could also figure out that the ECU device identifier is <b>0x37</b> and it can only be reached from the sender ID <b>0x13</b>. Can you help Santa to turn on the car?</p>
+
+                </td>
+            </tr>
+
         </tbody>
     </table>
 
