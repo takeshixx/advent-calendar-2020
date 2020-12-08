@@ -95,6 +95,11 @@ services:
     container_name: day08
     ports:
       - "8:6801"
+    healthcheck:
+      test: ["CMD-SHELL", "echo -e \"\\x00\\x00\\x00\\x04\\x00\\x01\\x13\\x37\\x24\\x12\"| nc 127.0.0.1 6801 -q 1 | grep 'BRUM BRUM' || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
   day09:
     image: day09
     container_name: day09
@@ -116,4 +121,13 @@ services:
     container_name: day11
     ports:
       - "11:4444"
-  
+  day12:
+    image: day12
+    container_name: day12
+    ports:
+      - "12:50051"
+  day13:
+    image: day13
+    container_name: day13
+    ports:
+      - "13:80"

@@ -79,3 +79,15 @@ day11-build:
 
 day11-up: day11-build
 	sudo docker save day11 | pv | ssh xmas sudo docker load
+
+day12-build:
+	sudo docker build --tag day12 -f xmasgreetings/Dockerfile xmasgreetings
+
+day12-up: day12-build
+	sudo docker save day12 | pv | ssh xmas sudo docker load
+
+day13-build:
+	sudo docker build --tag day13 -f xmas-webasm/Dockerfile xmas-webasm
+
+day13-up: day13-build
+	sudo docker save day13 | pv | ssh xmas sudo docker load
