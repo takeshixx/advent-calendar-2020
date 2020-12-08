@@ -18,9 +18,9 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 
 - [x] ~~[RFC2965](https://tools.ietf.org/html/rfc2965): Implement webapp that requires Cookie2 HTTP header.~~
 - [x] ~~[RFC7231](https://tools.ietf.org/html/rfc7231): Build a crawler with the From header.~~
-- [ ] WebAssembly page with Golang ([xmas-webasm](xmas-webasm))
+- [x] ~~WebAssembly page with Golang ([xmas-webasm](xmas-webasm))~~
 - [ ] Email stuff with DMARC/SPF and other stuff no one really understands.
-- [ ] gRPC
+- [x] ~~gRPC ([xmasgreetings](xmasgreetings))~~
 - [ ] WebRTC (Servers send image, have to build the client)
 - [ ] OData (e.g. with [godata](https://github.com/crestonbunch/godata))
 - [ ] [Oauth flow](https://www.ory.sh/run-oauth2-server-open-source-api-security/)
@@ -77,8 +77,8 @@ First one or two ports should be fairly simple to give participants an easy star
 | 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
 | 10    | A JPG file with a Red Star OS watermark that includes the flag. | [redstar](redstar)
 | 11    | A karaoke service where clients have to reflect song lyrics in the UTF encoding indicated by the returned BOM. | [xmas-karaoke](xmas-karaoke)
-| 12    | | []()
-| **13**    | | []()
+| 12    | A simple [gRPC](https://grpc.io/) service where clients have to call the `XmasGreeting()` function with the `xmas` name. Protobuf definition will be provided. | [xmasgreetings](xmasgreetings)
+| **13**    | WebAssembly page that requires a password. Prints the token with the proper password. | [xmas-webasm](xmas-webasm)
 | 14    | | []()
 | 15    | | []()
 | 16    | | []()
