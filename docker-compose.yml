@@ -66,6 +66,7 @@ services:
   day06:
     image: day06
     container_name: day06
+    restart: always
     ports:
       - "6:8080"
     read_only: true
@@ -95,6 +96,7 @@ services:
     container_name: day08
     ports:
       - "8:6801"
+    restart: always
     healthcheck:
       test: ["CMD-SHELL", "echo -e \"\\x00\\x00\\x00\\x04\\x00\\x01\\x13\\x37\\x24\\x12\"| nc 127.0.0.1 6801 -q 1 | grep 'BRUM BRUM' || exit 1"]
       interval: 1m30s
@@ -105,6 +107,7 @@ services:
     container_name: day09
     ports:
       - "9:8000"
+    restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -H \"Referer: /christmas_market\" -H \"From: santa@xmas.rip\" localhost:8000 | grep -q JuJiWZtTTQvVjDxF6qBB6F919hKappLb || exit 1"]
       interval: 1m30s
@@ -119,11 +122,13 @@ services:
   day11:
     image: day11
     container_name: day11
+    restart: always
     ports:
       - "11:4444"
   day12:
     image: day12
     container_name: day12
+    restart: always
     ports:
       - "12:50051"
   day13:
@@ -131,3 +136,4 @@ services:
     container_name: day13
     ports:
       - "13:80"
+    restart: always
