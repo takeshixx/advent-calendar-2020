@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/takeshixx/xmasgreetings";
+option java_multiple_files = true;
+option java_package = "io.grpc.xmas.xmasgreetings";
+option java_outer_classname = "XmasGreetingsProto";
+
+package xmasgreetings;
+
+service Greeter {
+  rpc XmasGreeting (XmasRequest) returns (XmasReply) {}
+}
+
+message XmasRequest {
+  string name = 1;
+}
+
+message XmasReply {
+  string message = 1;
+}
