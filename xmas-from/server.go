@@ -14,7 +14,6 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
 	if len(r.Header["Referer"]) > 0 && r.Header["Referer"][0] != "" &&
 		len(r.Header["From"]) > 0 && r.Header["From"][0] != "" {
 		if strings.ToLower(r.Header["Referer"][0]) == "/christmas_market" && strings.ToLower(r.Header["From"][0]) == "santa@xmas.rip" {
