@@ -91,3 +91,9 @@ day13-build:
 
 day13-up: day13-build
 	sudo docker save day13 | pv | ssh xmas sudo docker load
+
+day14-build:
+	sudo docker build --tag day14 -f WebRace/Dockerfile WebRace
+
+day14-up: day14-build
+	sudo docker save day14 | pv | ssh xmas sudo docker load

@@ -5,7 +5,7 @@ RUN apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev bu
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --upgrade pipenv
 
-ENV SECRET replacemeplease
+ENV SECRET "w0r2DmJz9ahZluVyajphYRNkDs864xrL"
 ENV IS_PRODUCTION True
 
 ADD webapp /webapp

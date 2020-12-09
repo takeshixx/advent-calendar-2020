@@ -35,7 +35,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
   - In case binary works and the vuln is fixed, create a security issue in the repo with the "flag" (security issues should only be visible to repo owners)
 - [x] ~~[DTLS 1.2](dtls/)~~
 - [ ] TLS 1.3
-- [ ] Webshop Race Conditions (Vouchers ausstellen)
+- [x] ~~Webshop Race Conditions (Vouchers ausstellen) [WebRace](WebRace)~~
 - [ ] [Diameter](http://www.freediameter.net/trac/)
 - [ ] Websockets
 - [x] ~~[HSZF(DoIP)/UDS](HSFZ/)~~
@@ -79,7 +79,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 11    | A karaoke service where clients have to reflect song lyrics in the UTF encoding indicated by the returned BOM. | [xmas-karaoke](xmas-karaoke)
 | 12    | A simple [gRPC](https://grpc.io/) service where clients have to call the `XmasGreeting()` function with the `xmas` name. Protobuf definition will be provided. | [xmasgreetings](xmasgreetings)
 | **13**    | WebAssembly page that requires a password. Prints the token with the proper password. | [xmas-webasm](xmas-webasm)
-| 14    | | []()
+| 14    | A web shop with a race condition vulnerability. | [WebRace](WebRace)
 | 15    | | []()
 | 16    | | []()
 | 17    | | []()

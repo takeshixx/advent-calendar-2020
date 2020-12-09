@@ -137,3 +137,14 @@ services:
     ports:
       - "13:80"
     restart: always
+  day14:
+    image: day14
+    container_name: day14
+    ports:
+      - "14:80"
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl 127.0.0.1:80 2>/dev/null | grep 'You are a guest' || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
