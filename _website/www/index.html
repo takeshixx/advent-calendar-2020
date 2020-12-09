@@ -291,7 +291,7 @@
             </tr>
 
             <tr id="day07">
-                <td><div></div><span><img src="img/7.png" alt="day6" title="d4a61b72b672dcf11e06afe7f085bfcfd821b08611098ad42d618db3acca0a64" class="titleimg" /> 7/TCP</span></td>
+                <td><div></div><span><img src="img/7.png" alt="day7" title="d4a61b72b672dcf11e06afe7f085bfcfd821b08611098ad42d618db3acca0a64" class="titleimg" /> 7/TCP</span></td>
                 <td>
                     <p class="description">Santa's diligent helpers received non-xmas communication from the future, <a href="http://xmas.rip:7">Santa's Operations Center (SOC)</a>. Apparently, the Grinch is going to send a file to Santa's XMAS service causing a POLYGLOTAL problem on 24th of December. Santa's investigators need your help! Can you FIND and EXTRACT the file Grinch send to the XMAS SERVICE and inspect its contents...? </p>
 
@@ -306,13 +306,23 @@
             </tr>
 
             <tr id="day08">
-                <td><div></div><span><img src="img/8.png" alt="day6" title="0aae4bee0c1d57ca7e952736fb4f94be0456667fd19367190d3268f95779d478" class="titleimg" /> 8/TCP</span></td>
+                <td><div></div><span><img src="img/8.png" alt="day8" title="0aae4bee0c1d57ca7e952736fb4f94be0456667fd19367190d3268f95779d478" class="titleimg" /> 8/TCP</span></td>
                 <td>
                     <p class="description">Since reindeer went on strike Santa fell in love with his <a href="https://www.youtube.com/watch?v=IiXEenC3Ew4">beamer</a>. But dammit, he hasn´t turned it on for quite a while and forgot where his keys are. However, due to new technological advances he can now turn his car on with an app on his phone because of direct access to the ECUs via the Internet!</p>
 
                     <p class="additional">His car was explicitly built for him, and he suspects the ignition sequence has something to do with XMAS! But all this protocol weirdness is too much for him to handle. Santa first discovered that the ignition ECU accepts <a href="https://scapy.readthedocs.io/en/latest/api/scapy.contrib.automotive.uds.html">UDS</a> <a href="https://automotive.softing.com/fileadmin/sof-files/pdf/de/ae/poster/UDS_Faltposter_softing2016.pdf">messages</a>. However, since it is a beamer, this message is not wrapped by DoIP but rather by <a href="https://scapy.readthedocs.io/en/latest/api/scapy.contrib.automotive.bmw.hsfz.html">High-Speed-Fahrzeug-Zugang (HSFZ)</a>.</p>
                         
                     <p class="additional">Santa could also figure out that the ECU device identifier is <b>0x37</b> and it can only be reached from the sender ID <b>0x13</b>. Can you help Santa to turn on the car?</p>
+
+                </td>
+            </tr>
+
+            <tr id="day09">
+                <td><div></div><span><img src="img/9.png" alt="day9" title="0b6739ed603ecdc3ad37e368716337e97710a30f9a85605f4001665149872e03" class="titleimg" /> 9/TCP</span></td>
+                <td>
+                    <p class="description">A new joyful day in Christmas land's streets, and Santa is preparing presents to deliver later on. He has to get into some stores near the Christmas market, but first he always visits the market to get some Christmas candy and mulled wine. A particularly interesting store is one where only Santa is allowed to enter. However, he never seems to provide any ID. How could they know it is him?</p>
+                    
+                    <p class="additional">So Santa only comes here after visiting the <span class="qa">/christmas_market</span> from his own <span class="qa">xmas.rip</span> domain. It seems like the store owners always track the proper <a href="https://tools.ietf.org/html/rfc7231#section-5.5">request context</a>...</p>
 
                 </td>
             </tr>
