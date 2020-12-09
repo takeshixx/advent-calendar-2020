@@ -1,0 +1,25 @@
+# netplan network config
+network:
+    version: 2
+    ethernets:
+        ens3:
+            match:
+                macaddress: fa:16:3e:25:09:fc
+            mtu: 1500
+            set-name: ens3
+            dhcp4: no
+            dhcp6: no
+            addresses:
+                - 51.195.44.86/32 
+                - 2001:41d0:701:1100::5f0e/128
+            routes:
+                - to: "2001:41d0:701:1100::1/128"
+                  scope: link
+                - to: "::/0"
+                  via: "2001:41d0:701:1100::1"
+                  on-link: true
+                - to: "51.195.44.1/32"
+                  scope: link
+                - to: "0.0.0.0/0"
+                  via: "51.195.44.1"
+                  on-link: true
