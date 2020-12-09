@@ -62,7 +62,7 @@ Healthstate can be monitored with ``docker events --filter event=health_status``
 
 ## Agenda
 
-First one or two ports should be fairly simple to give participants an easy start. The bold days are 2nd to 4th advents (1st is not in december this year) and they should have special challenges (harder/more complex).
+First one or two ports should be fairly simple to give participants an easy start. The bold and underlined days are 2nd to 4th advents (1st is not in december this year) and they should have special challenges (harder/more complex).
 
 | Port | Challenge | Path |
 | ---- | --------- | ---- |
@@ -71,21 +71,21 @@ First one or two ports should be fairly simple to give participants an easy star
 | 3    | ELF binary with wrong entry point. If entry point is set to the correct one, the flag is printed. Binary is provided via web server. | [ELF](elf)
 | 4    | xmas-socks is a simple portable parallel secure SOCKS server written in Go. | [xmas-socks](xmas-socks)
 | 5    | A custom TLS server written in Go that returns the flag if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation). | [proto](proto)
-| **6**   | Web version of VSCode (Monaco editor) which allows to execute OS commands to read and decrypt flag via JavaScript. | [XMAS Cloud](xmas-cloud/)
+| <ins>**6**</ins>   | Web version of VSCode (Monaco editor) which allows to execute OS commands to read and decrypt flag via JavaScript. | [XMAS Cloud](xmas-cloud/)
 | 7    | PCAP File containg a Polyglot file containing the flag a.k.a as Матрешка (Matreshka). | [PCAP_poly](PCAP_poly)
 | 8    | High Speed Fahrzeugzugang (HSFZ) server where user's have to send a proper HSFZ packet that starts the car. | [HSFZ](HSFZ)
 | 9    | A simple webserver that only shows the flag with a correct Request Context, which has to include a proper `From` and `Referer` header. | [xmas-from](xmas-from)
 | 10    | A JPG file with a Red Star OS watermark that includes the flag. | [redstar](redstar)
 | 11    | A karaoke service where clients have to reflect song lyrics in the UTF encoding indicated by the returned BOM. | [xmas-karaoke](xmas-karaoke)
 | 12    | A simple [gRPC](https://grpc.io/) service where clients have to call the `XmasGreeting()` function with the `xmas` name. Protobuf definition will be provided. | [xmasgreetings](xmasgreetings)
-| **13**    | WebAssembly page that requires a password. Prints the token with the proper password. | [xmas-webasm](xmas-webasm)
+| <ins>**13**</ins>    | WebAssembly page that requires a password. Prints the token with the proper password. | [xmas-webasm](xmas-webasm)
 | 14    | A web shop with a race condition vulnerability. | [WebRace](WebRace)
 | 15    | | []()
 | 16    | | []()
 | 17    | | []()
 | 18    | | []()
 | 19    | | []()
-| **20**    | | []()
+| <ins>**20**</ins>    | | []()
 | 21    | | []()
 | 22    | | []()
 | 23    | | []()
