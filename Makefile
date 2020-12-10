@@ -75,7 +75,7 @@ day10-up: day10-build
 	sudo docker save day10 | pv | ssh xmas sudo docker load
 
 day11-build:
-	sudo docker build --tag day11 -f utf16bom/Dockerfile utf16bom
+	sudo docker build --tag day11 -f xmas-karaoke/Dockerfile xmas-karaoke
 
 day11-up: day11-build
 	sudo docker save day11 | pv | ssh xmas sudo docker load
