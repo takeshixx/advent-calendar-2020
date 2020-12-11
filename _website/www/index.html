@@ -331,6 +331,14 @@
                         
                     <p class="additional">Santa could also figure out that the ECU device identifier is <b>0x37</b> and it can only be reached from the sender ID <b>0x13</b>. Can you help Santa to turn on the car?</p>
 
+                    <h4><a href="#/" onclick="toggle_visibility('hint8');">Hints</a></h4>
+                    <div id="hint8" class="additional changelog">
+                        <ul>
+                            <li><code>echo -e '\x00\x00\x00<b>&lt;length&gt;</b>\x00\x01\x13\x37<b>&lt;service bytes&gt;</b>' | nc &lt;service&gt; &lt;port&gt;</port></code></li>
+                            <li>Make sure Scapy creates the proper packet bytes!</li>
+                        </ul>
+                    </div>
+
                 </td>
             </tr>
 
