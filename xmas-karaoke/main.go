@@ -89,7 +89,7 @@ var BOMList = []string{
 	"FEFF",     // UTF16-BE
 	"FFFE",     // UTF16-LE
 	"0000FEFF", // UTF32-BE
-	"FFFE00",   // UTF32-LE
+	"FFFE0000", // UTF32-LE
 }
 
 func handleConnection(c net.Conn) {
