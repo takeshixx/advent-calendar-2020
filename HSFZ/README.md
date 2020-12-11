@@ -25,6 +25,14 @@ docker build -t dayxx_sbeamer .
 sudo docker run -d -p xx:6801 dayxx_sbeamer
 ```
 
+## Tipp
+
+```bash
+echo -e '\x00\x00\x00<length>\x00\x01\x13\x37<service bytes>'| nc <service> <port>
+```
+
+Todo scapy solution
+
 ## Solution
 
 ```bash
