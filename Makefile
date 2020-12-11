@@ -97,3 +97,77 @@ day14-build:
 
 day14-up: day14-build
 	sudo docker save day14 | pv | ssh xmas sudo docker load
+
+#####################################
+
+day01-restart:
+	ssh xmas "sudo docker-compose stop day01 && sudo docker-compose up -d day01"
+
+day02-restart:
+	ssh xmas "sudo docker-compose stop day02 && sudo docker-compose up -d day02"
+
+day03-restart:
+	ssh xmas "sudo docker-compose stop day03 && sudo docker-compose up -d day03"
+
+day04-restart:
+	ssh xmas "sudo docker-compose stop day04 && sudo docker-compose up -d day04"
+
+day05-restart:
+	ssh xmas "sudo docker-compose stop day05 && sudo docker-compose up -d day05"
+
+day06-restart:
+	ssh xmas "sudo docker-compose stop day06 && sudo docker-compose up -d day06"
+
+day07-restart:
+	ssh xmas "sudo docker-compose stop day07 && sudo docker-compose up -d day07"
+
+day08-restart:
+	ssh xmas "sudo docker-compose stop day08 && sudo docker-compose up -d day08"
+
+day09-restart:
+	ssh xmas "sudo docker-compose stop day09 && sudo docker-compose up -d day09"
+
+day10-restart:
+	ssh xmas "sudo docker-compose stop day10 && sudo docker-compose up -d day10"
+
+day11-restart:
+	ssh xmas "sudo docker-compose stop day11 && sudo docker-compose up -d day11"
+
+day12-restart:
+	ssh xmas "sudo docker-compose stop day12 && sudo docker-compose up -d day12"
+
+day13-restart:
+	ssh xmas "sudo docker-compose stop day13 && sudo docker-compose up -d day13"
+
+day14-restart:
+	ssh xmas "sudo docker-compose stop day14 && sudo docker-compose up -d day14"
+
+day15-restart:
+	ssh xmas "sudo docker-compose stop day15 && sudo docker-compose up -d day15"
+
+day16-restart:
+	ssh xmas "sudo docker-compose stop day16 && sudo docker-compose up -d day16"
+
+day17-restart:
+	ssh xmas "sudo docker-compose stop day17 && sudo docker-compose up -d day17"
+
+day18-restart:
+	ssh xmas "sudo docker-compose stop day18 && sudo docker-compose up -d day18"
+
+day19-restart:
+	ssh xmas "sudo docker-compose stop day19 && sudo docker-compose up -d day19"
+
+day20-restart:
+	ssh xmas "sudo docker-compose stop day20 && sudo docker-compose up -d day20"
+
+day21-restart:
+	ssh xmas "sudo docker-compose stop day21 && sudo docker-compose up -d day21"
+
+day22-restart:
+	ssh xmas "sudo docker-compose stop day22 && sudo docker-compose up -d day22"
+
+day23-restart:
+	ssh xmas "sudo docker-compose stop day23 && sudo docker-compose up -d day23"
+
+day24-restart:
+	ssh xmas "sudo docker-compose stop day24 && sudo docker-compose up -d day24"
