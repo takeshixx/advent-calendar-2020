@@ -148,3 +148,9 @@ services:
       interval: 1m30s
       timeout: 10s
       retries: 3
+  day15:
+    image: day15
+    container_name: day15
+    ports:
+      - "15:8000"
+    restart: always
