@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nts:
+    build: .
+    volumes:
+      - ./private:/etc/ssl/private:ro
+    read_only: false
+    ports:
+      # HOST:CONTAINER
+      - "4460:4460/tcp"
+      - "4460:4460/udp"
