@@ -33,6 +33,10 @@ COPY config /etc/ntp.d/config
 RUN rm -rf /var/lib/apt/lists/* && \
     rm -rf /build/ntpsec-NTPsec_*
 
+# fix tools like ntpq 
+RUN echo "/usr/local/lib/ntp" > /etc/ld.so.conf.d/ntp.conf
+RUN ldconfig 
+
 EXPOSE 4460/udp
 EXPOSE 4460/tcp
 
