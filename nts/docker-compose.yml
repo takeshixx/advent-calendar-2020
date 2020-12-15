@@ -5,7 +5,9 @@ services:
     volumes:
       - ./private:/etc/ssl/private:ro
     read_only: false
+    # Testing only: network_mode: host
     ports:
       # HOST:CONTAINER
       - "4460:4460/tcp"
-      - "4460:4460/udp"
+      # UDP port is not nessescary to solve the challange:
+      - "123:123/udp"

@@ -13,6 +13,11 @@ RUN tar -xzf ntpsec.tar.gz ;\
     cd ntpsec-NTPsec_* ;\
     ./buildprep
 
+# Apply xmas patch
+COPY xmas-patch.diff /build
+RUN cd ntpsec-NTPsec_* ;\
+    patch -p1 < ../xmas-patch.diff
+
 # install ntpsec
 RUN cd ntpsec-NTPsec_* ;\
     ./waf configure && \
