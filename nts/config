@@ -12,8 +12,8 @@ filegen clockstats file clockstats type day enable
 logfile /var/log/ntpd.log
 logconfig =syncall +clockall +peerall +sysall
 
-nts key /etc/ssl/private/privkey.pem
-nts cert /etc/ssl/private/fullchain.pem
+nts key /etc/ssl/private/privkey1.pem
+nts cert /etc/ssl/private/fullchain1.pem
 nts cookie /var/lib/ntp/nts-keys
 nts enable
 
