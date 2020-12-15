@@ -31,7 +31,7 @@ index cb4a2dfd3..1f6ef9f3d 100644
  
 +bool nts_ntp4_server_negotiation_send(struct BufCtl_t *buf) {
 +
-+	char *str = "the-token-is.TOKEN.xmas.rip";
++	char *str = "the-token-is.gQ0Kvp5pdHqpeAfJXVrzsdKylqclHmcj.xmas.rip";
 +	ex_append_record_bytes(buf, NTS_CRITICAL+nts_server_negotiation, str, strlen(str)+1);
 +
 +	return true;
