@@ -37,6 +37,8 @@ RUN rm -rf /var/lib/apt/lists/* && \
 RUN echo "/usr/local/lib/ntp" > /etc/ld.so.conf.d/ntp.conf
 RUN ldconfig 
 
+COPY config_client /etc/ntp.d/config_client
+
 EXPOSE 4460/udp
 EXPOSE 4460/tcp
 
