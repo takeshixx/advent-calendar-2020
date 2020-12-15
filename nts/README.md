@@ -14,7 +14,7 @@ docker-compose build
 
 ## Run with Docker
 
-The flag can be found in the patch [xmas-patch.diff](xmas-patch.diff). Edit the ``xmas-patch.diff`` and modify the string ``"the-token-is.TOKEN.xmas.rip"``. Then rebuild the container:
+The flag can be found in the patch [xmas-patch.diff](xmas-patch.diff). Edit the ``xmas-patch.diff`` and modify the string ``"the-token-is.TOKEN.xmas.rip"``. The token needs to be a valid fully qualified domain name (FQDN). Then rebuild the container:
 
 ```bash
 docker-compose up --build
