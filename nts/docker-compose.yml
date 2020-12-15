@@ -8,6 +8,6 @@ services:
     # Testing only: network_mode: host
     ports:
       # HOST:CONTAINER
-      - "4460:4460/tcp"
+      - "15:4460/tcp"
       # UDP port is not nessescary to solve the challange:
       - "123:123/udp"
