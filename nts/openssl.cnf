@@ -1,0 +1,21 @@
+[ req ]
+prompt = no
+default_bits = 4096
+distinguished_name = req_distinguished_name
+req_extensions = req_ext
+
+[ req_distinguished_name ]
+C=DE
+ST=BW
+L=HD
+O=Santa
+OU=Santa
+CN=xmas.rip
+
+[ req_ext ]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = hostname.domain.tld
+DNS.2 = hostname
+IP.1 = 10.20.30.40

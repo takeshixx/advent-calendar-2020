@@ -1,0 +1,17 @@
+driftfile /var/lib/ntp/ntp.drift
+
+statsdir /var/log/ntpstats/
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+logfile /var/log/ntpd.log
+logconfig =syncall +clockall +peerall +sysall
+
+server 172.17.0.1 nts noval
+
+restrict default kod limited nomodify nopeer noquery
+restrict 127.0.0.1
+restrict ::1

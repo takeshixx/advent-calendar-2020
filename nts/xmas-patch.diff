@@ -1,0 +1,40 @@
+diff --git a/include/nts.h b/include/nts.h
+index 316eaa885..0f37c3cd6 100644
+--- a/include/nts.h
++++ b/include/nts.h
+@@ -50,6 +50,7 @@ typedef struct BufCtl_t BufCtl;
+ bool nts_ke_process_receive(struct BufCtl_t *buf, int *aead);
+ bool nts_ke_setup_send(struct BufCtl_t *buf, int aead,
+        uint8_t *c2s, uint8_t *s2c, int keylen);
++bool nts_ntp4_server_negotiation_send(struct BufCtl_t *buf);
+ 
+ /***********************************************************/
+ 
+diff --git a/ntpd/nts_server.c b/ntpd/nts_server.c
+index cb4a2dfd3..1f6ef9f3d 100644
+--- a/ntpd/nts_server.c
++++ b/ntpd/nts_server.c
+@@ -343,6 +343,10 @@ bool nts_ke_request(SSL *ssl) {
+ 
+ 	buf.next = buff;
+ 	buf.left = sizeof(buff);
++
++	if(!nts_ntp4_server_negotiation_send(&buf))
++		return false;
++
+ 	if (!nts_ke_setup_send(&buf, aead, c2s, s2c, keylen))
+ 		return false;
+ 
+@@ -549,4 +553,12 @@ bool nts_ke_setup_send(struct BufCtl_t *buf, int aead,
+ 
+ }
+ 
++bool nts_ntp4_server_negotiation_send(struct BufCtl_t *buf) {
++
++	char *str = "the-token-is.TOKEN.xmas.rip";
++	ex_append_record_bytes(buf, NTS_CRITICAL+nts_server_negotiation, str, strlen(str)+1);
++
++	return true;
++}
++
+ /* end */
