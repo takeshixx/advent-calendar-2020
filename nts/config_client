@@ -10,7 +10,7 @@ filegen clockstats file clockstats type day enable
 logfile /var/log/ntpd.log
 logconfig =syncall +clockall +peerall +sysall
 
-server 172.17.0.1 nts noval
+server xmas.rip:15 nts noval
 
 restrict default kod limited nomodify nopeer noquery
 restrict 127.0.0.1
