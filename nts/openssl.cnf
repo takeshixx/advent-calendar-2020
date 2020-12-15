@@ -8,8 +8,8 @@ req_extensions = req_ext
 C=DE
 ST=BW
 L=HD
-O=You found the token
-OU=EXAMPLE_TOKEN
+O=Santa
+OU=Santa
 CN=xmas.rip
 
 [ req_ext ]
