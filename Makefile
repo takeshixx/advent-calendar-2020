@@ -99,10 +99,16 @@ day14-up: day14-build
 	sudo docker save day14 | pv | ssh xmas sudo docker load
 
 day15-build:
-	sudo docker build --tag day15 -f ip-https/Dockerfile ip-https
+	sudo docker build --tag day15 -f nts/Dockerfile nts
 
 day15-up: day15-build
 	sudo docker save day15 | pv | ssh xmas sudo docker load
+
+day16-build:
+	sudo docker build --tag day16 -f ip-https/Dockerfile ip-https
+
+day16-up: day16-build
+	sudo docker save day16 | pv | ssh xmas sudo docker load
 
 #####################################
 

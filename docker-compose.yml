@@ -151,6 +151,17 @@ services:
   day15:
     image: day15
     container_name: day15
+    read_only: false
     ports:
-      - "15:8000"
+      - "15:4460/tcp"
     restart: always
+    volumes:
+      - /etc/letsencrypt/archive/xmas.rip:/etc/ssl/private:ro
+  day16:
+    image: day16
+    container_name: day16
+    ports:
+      - "16:8000"
+    restart: always
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
