@@ -84,7 +84,7 @@ First one or two ports should be fairly simple to give participants an easy star
 | 15    | A Network Time Security service which returns the token in a NTPv4 Server Negotiation Message.| [nts](nts)
 | 16    | A simple IP-HTTPS server where a client has to bring up a IP-HTTPS link. | [ip-https](ip-https)
 | 17    | A HTTP server that is only accessible via [TLS-over-SCTP](https://tools.ietf.org/html/rfc3436). | [tls-over-sctp](tls-over-sctp)
-| 18    | | []()
+| 18    | A [Rust](https://www.rust-lang.org/) RPC service. | [rustRPC](rustRPC)
 | 19    | | []()
 | <ins>**20**</ins>    | | []()
 | 21    | | []()
