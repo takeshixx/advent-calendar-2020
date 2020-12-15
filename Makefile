@@ -116,6 +116,12 @@ day17-build:
 day17-up: day17-build
 	sudo docker save day17 | pv | ssh xmas sudo docker load
 
+day18-build:
+	sudo docker build --tag day18 -f rustRPC/Dockerfile rustRPC
+
+day18-up: day18-build
+	sudo docker save day18 | pv | ssh xmas sudo docker load
+
 #####################################
 
 day01-restart:

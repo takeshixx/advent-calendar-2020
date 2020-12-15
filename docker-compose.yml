@@ -173,3 +173,9 @@ services:
     restart: always
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt:ro
+  day18:
+    image: day18
+    container_name: day18
+    ports:
+      - "18:8888"
+    restart: always

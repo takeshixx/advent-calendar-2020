@@ -2,7 +2,7 @@ FROM rust:1.48 as builder
 
 COPY tarpc /root/tarpc
 
-ENV SECRET TestSecretHere
+ENV SECRET "H9npZk8j6Uiu31lHorHqCfwQ1j4dBwrF"
 
 WORKDIR /root/tarpc/Xmas-service
 
