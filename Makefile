@@ -110,6 +110,12 @@ day16-build:
 day16-up: day16-build
 	sudo docker save day16 | pv | ssh xmas sudo docker load
 
+day17-build:
+	sudo docker build --tag day17 -f tls-over-sctp/Dockerfile tls-over-sctp
+
+day17-up: day17-build
+	sudo docker save day17 | pv | ssh xmas sudo docker load
+
 #####################################
 
 day01-restart:
