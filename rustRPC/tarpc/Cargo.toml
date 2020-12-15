@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "example-service",
+    "tarpc",
+    "plugins",
+]
