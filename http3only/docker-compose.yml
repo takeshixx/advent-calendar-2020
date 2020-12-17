@@ -2,6 +2,8 @@ version: '3'
 services:
   http3only:
     build: .
+    volumes:
+      - ./cert:/app/cert:ro
     read_only: true
     ports:
       # HOST:CONTAINER
