@@ -165,3 +165,17 @@ services:
     restart: always
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
+  day17:
+    image: day17
+    container_name: day17
+    ports:
+      - "17:8000/sctp"
+    restart: always
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+  day18:
+    image: day18
+    container_name: day18
+    ports:
+      - "18:8888"
+    restart: always

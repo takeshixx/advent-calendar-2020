@@ -110,6 +110,18 @@ day16-build:
 day16-up: day16-build
 	sudo docker save day16 | pv | ssh xmas sudo docker load
 
+day17-build:
+	sudo docker build --tag day17 -f tls-over-sctp/Dockerfile tls-over-sctp
+
+day17-up: day17-build
+	sudo docker save day17 | pv | ssh xmas sudo docker load
+
+day18-build:
+	sudo docker build --tag day18 -f rustRPC/Dockerfile rustRPC
+
+day18-up: day18-build
+	sudo docker save day18 | pv | ssh xmas sudo docker load
+
 #####################################
 
 day01-restart:
