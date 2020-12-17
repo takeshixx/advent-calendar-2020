@@ -1,0 +1,9 @@
+version: '3'
+services:
+  http3only:
+    build: .
+    read_only: true
+    ports:
+      # HOST:CONTAINER
+      - "26:6121/udp"
+    command: ["./http3only", "--flag", "ADD FLAG HERE"]
