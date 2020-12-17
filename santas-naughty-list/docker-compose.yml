@@ -1,0 +1,8 @@
+version: '3'
+services:
+  santas-naughty-list:
+    build: .
+    read_only: true
+    ports:
+      # HOST:CONTAINER
+      - "26:8080"
