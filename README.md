@@ -50,6 +50,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~Image with Red Star OS watermark that includes the flag~~
 - [ ] [XMAS scan](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html) port that only allows packets with FIN, PSH and URG flags set
 - [x] ~~[NTS](nts): [RFC 8915 - Network Time Security (NTS)](https://tools.ietf.org/html/rfc8915) server ([nts](nts))~~
+- [x] [SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.
 
 ### Overall Challenge
 
