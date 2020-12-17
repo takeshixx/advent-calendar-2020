@@ -6,9 +6,13 @@ import (
 	"log"
 	"mime"
 	"net/http"
+	"os"
+	"regexp"
 )
 
 const port = 8080
+
+var token = "PLEASE PASS THE TOKEN"
 
 func cspMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -34,16 +38,41 @@ func langHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func getFlagText(r *http.Request) string {
+	langParam := r.URL.Query().Get("lang")
+	naughtyParam := r.URL.Query().Get("naughty")
+
+	searchTemplateInjection := regexp.MustCompile(`{{.*}}`)
+	searchHTMLInjection := regexp.MustCompile(`\\".*>`)
+	searchJSInjection := regexp.MustCompile(`data\-action=.*{.*\\"method\\".*:`)
+
+	templateInjectionFound := searchTemplateInjection.MatchString(langParam)
+	htmlInjectionFound := searchHTMLInjection.MatchString(naughtyParam)
+	jsInjectionFound := searchJSInjection.MatchString(naughtyParam)
+
+	if templateInjectionFound && htmlInjectionFound && jsInjectionFound {
+		return "You found the token: " + token
+	} else if templateInjectionFound && htmlInjectionFound {
+		return "You injected HTML! Can you also inject JavaScript?"
+	} else if templateInjectionFound {
+		return "You found the template injection! Can you also inject HTML?"
+	}
+
+	return ""
+}
+
 func defaultPageHandler(w http.ResponseWriter, r *http.Request) {
+	flag := getFlagText(r)
+
 	data := struct {
-		Lang    string
-		Naughty string
-		// Comment template.HTML
+		Lang       string
+		Naughty    string
+		Flag       string
 		DataAction template.HTMLAttr
 	}{
 		r.URL.Query().Get("lang"),
 		r.URL.Query().Get("naughty"),
-		// template.HTML("<!-- TODO: <script src=\"/lang.js?lang=\"></script> -->"),
+		flag,
 		template.HTMLAttr("data-action='{\"method\":\"deleteEntry\",\"parameters\":\"{{index}}\"}'"),
 	}
 	t, e := template.ParseFiles("templates/index.html")
@@ -58,6 +87,11 @@ func defaultPageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	if len(os.Args) != 2 {
+		log.Fatalf("Please pass the token as the first argument.")
+	}
+	token = os.Args[1]
+
 	mime.AddExtensionType(".css", "text/css; charset=utf-8")
 	mime.AddExtensionType(".js", "application/javascript; charset=utf-8")
 	mime.AddExtensionType(".html", "text/html")

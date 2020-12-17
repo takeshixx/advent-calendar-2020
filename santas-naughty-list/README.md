@@ -14,7 +14,7 @@ docker-compose build
 
 ## Run with Docker
 
-Add flag to ``flag.txt``.
+Add flag to the [``docker-compose.yml``](./docker-compose.yml).
 
 ```bash
 docker-compose up --build

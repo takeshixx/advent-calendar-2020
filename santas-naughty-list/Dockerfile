@@ -14,4 +14,4 @@ COPY --from=builder /src/static ./static
 COPY --from=builder /src/templates ./templates
 COPY --from=builder /src/santas-naughty-list .
 EXPOSE 8080
-CMD ["./santas-naughty-list"]
+CMD ["./santas-naughty-list", "EXAMPLE FLAG"]
