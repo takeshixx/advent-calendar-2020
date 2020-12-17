@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SANTAS NAUGHTY LIST</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<script id="naughty-list-tmpl" type="x-tmpl-mustache">
+		Naughty persons:
+		<ul lang="{{.Lang}}">
+			{{`{{#people}}`}}
+			  <li>{{`{{name}}`}}<a href="#" {{.DataAction}} class="remove">✗</a></li>
+			{{`{{/people}}`}}
+		</ul>
+	</script>
+	<div id="main">
+		<h1>SANTAS NAUGHTY LIST</h1>
+		<div>
+			<div id="list-wrapper" data-list="{{.Naughty}}">
+			</div>
+            <form>
+                Add Name:
+                <input type="text" id="add">
+                <input type="submit" value="Add">
+            </form>
+			<p><a href="flag.txt">Flag</a></p>
+		</div>
+	</div>
+	<script src="/static/mustache.js"></script>
+	<script src="/static/script.js" type="module"></script>
+</body>
+</html>
