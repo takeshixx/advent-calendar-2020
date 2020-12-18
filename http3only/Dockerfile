@@ -14,4 +14,4 @@ COPY --from=builder /src/static ./static
 COPY --from=builder /src/templates ./templates
 COPY --from=builder /src/http3only .
 EXPOSE 8080
-CMD ["./http3only", "--flag", "EXAMPLE FLAG"]
+CMD ["./http3only", "--flag", "ltim2wewL7p5SgS1ig2Rbc0zBwXQWS8P"]

@@ -122,6 +122,18 @@ day18-build:
 day18-up: day18-build
 	sudo docker save day18 | pv | ssh xmas sudo docker load
 
+day19-build:
+	sudo docker build --tag day19 -f http3only/Dockerfile http3only
+
+day19-up: day19-build
+	sudo docker save day19 | pv | ssh xmas sudo docker load
+
+day20-build:
+	sudo docker build --tag day20 -f santas-naughty-list/Dockerfile santas-naughty-list
+
+day20-up:
+	sudo docker save day20 | pv | ssh xmas sudo docker load
+
 #####################################
 
 day01-restart:

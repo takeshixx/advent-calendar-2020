@@ -50,8 +50,8 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~Image with Red Star OS watermark that includes the flag~~
 - [ ] [XMAS scan](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html) port that only allows packets with FIN, PSH and URG flags set
 - [x] ~~[NTS](nts): [RFC 8915 - Network Time Security (NTS)](https://tools.ietf.org/html/rfc8915) server ([nts](nts))~~
-- [x] [SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.
-- [x] [HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.
+- [x] ~~[SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.~~
+- [x] ~~[HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.~~
 
 ### Overall Challenge
 
@@ -87,8 +87,8 @@ First one or two ports should be fairly simple to give participants an easy star
 | 16    | A simple IP-HTTPS server where a client has to bring up a IP-HTTPS link. | [ip-https](ip-https)
 | 17    | A HTTP server that is only accessible via [TLS-over-SCTP](https://tools.ietf.org/html/rfc3436). | [tls-over-sctp](tls-over-sctp)
 | 18    | A [Rust](https://www.rust-lang.org/) RPC service. | [rustRPC](rustRPC)
-| 19    | | []()
-| <ins>**20**</ins>    | | []()
+| 19    | A HTTP/3-only server on UDP. | [http3only](http3only)
+| <ins>**20**</ins>    | CSP bypass challenge. | [santas-naughty-list](santas-naughty-list)
 | 21    | | []()
 | 22    | | []()
 | 23    | | []()

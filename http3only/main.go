@@ -100,5 +100,5 @@ func main() {
 
 // Setup a bare-bones TLS config for the server
 func generateTLSConfig() (string, string) {
-	return "cert/fullchain0.pem", "cert/privkey0.pem"
+	return "cert/fullchain1.pem", "cert/privkey1.pem"
 }

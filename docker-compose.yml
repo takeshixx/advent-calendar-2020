@@ -179,3 +179,19 @@ services:
     ports:
       - "18:8888"
     restart: always
+  day19:
+    image: day19
+    container_name: day19
+    ports:
+      - "19:6121/udp"
+    restart: always
+    read_only: true
+    volumes:
+      - /etc/letsencrypt/archive/xmas.rip:/app/cert:ro
+  day20:
+    image: day20
+    container_name: day20
+    ports:
+      - "20:8080"
+    restart: always
+    read_only: true
