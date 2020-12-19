@@ -9,7 +9,6 @@ RUN chmod -R go+rX .
 
 FROM scratch
 WORKDIR /app
-USER 1001
 COPY --from=builder /src/static ./static
 COPY --from=builder /src/templates ./templates
 COPY --from=builder /src/http3only .

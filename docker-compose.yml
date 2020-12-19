@@ -188,6 +188,7 @@ services:
     read_only: true
     volumes:
       - /etc/letsencrypt/archive/xmas.rip:/app/cert:ro
+    command: ["./http3only", "--flag", "ltim2wewL7p5SgS1ig2Rbc0zBwXQWS8P", "--bind", "0.0.0.0:6121"]
   day20:
     image: day20
     container_name: day20
