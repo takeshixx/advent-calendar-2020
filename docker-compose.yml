@@ -179,3 +179,36 @@ services:
     ports:
       - "18:8888"
     restart: always
+  day19:
+    image: day19
+    container_name: day19
+    ports:
+      - "19:6121/udp"
+    restart: always
+    read_only: true
+    volumes:
+      - /etc/letsencrypt/archive/xmas.rip:/app/cert:ro
+    command: ["./http3only", "--flag", "ltim2wewL7p5SgS1ig2Rbc0zBwXQWS8P", "--bind", "0.0.0.0:6121"]
+  day20:
+    image: day20
+    container_name: day20
+    ports:
+      - "20:8080"
+    restart: always
+    read_only: true
+  day21:
+    image: day21
+    container_name: day21
+    restart: always
+    ports:
+      - "21:21"
+      - "21000-21010:21000-21010"
+    environment:
+      - USERS=santa|xmas|/santa|10000
+    volumes:
+      - /home/ubuntu/data/day21/data:/santa:ro
+  day24:
+    image: day24
+    container_name: day24
+    restart: always
+    network_mode: host
