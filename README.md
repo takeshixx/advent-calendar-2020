@@ -46,13 +46,13 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[proto](proto/): The proto challenge offers the token if you negotiate the correct [TLS ALPN protocol](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation).~~
 - [ ] [WireGuard](https://www.wireguard.com/)
 - [x] ~~Server which requires to send specific UTF16 strings with correct BOM ([xmas-karaoke](xmas-karaoke))~~
-- [ ] Something with emojis
 - [x] ~~Image with Red Star OS watermark that includes the flag~~
 - [x] ~~[XMAS scan](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html) port that only allows packets with FIN, PSH and URG flags set~~
 - [x] ~~[NTS](nts): [RFC 8915 - Network Time Security (NTS)](https://tools.ietf.org/html/rfc8915) server ([nts](nts))~~
 - [x] ~~[SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.~~
 - [x] ~~[HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.~~
 - [x] [Santa's Christmas Factory](./santas-christmas-factory) is a web server affected by JavaScript prototype pollution.
+- [ ] [Something with emojis](./emoji) is a small TCP server with a emoji "puzzle/quiz".
 
 ### Overall Challenge
 
