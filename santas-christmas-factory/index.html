@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Santa's Christmas Factory</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<h1>Santa's Christmas Factory</h1>
+		<div>
+            <div id="img"><img src="pollution.svg" id="img-pollution" alt="This file is public domain; Source: https://openclipart.org/detail/101575/air-pollution"></div>
+
+            <form>
+                <p class="question">How to stop pollution?</p>
+                <input type="password" id="answer">
+                <input type="submit" value="Stop pollution!">
+            </form>
+            <p class="small"><a href="stopPollution.js">Source Code</a></p>
+        </div>
+	</div>
+    <script type="text/javascript">
+        document.querySelector("form").addEventListener("submit",(e) => {
+            e.preventDefault();
+            data = {
+                answer: document.querySelector("#answer").value
+            };
+            
+            fetch('/stopPollution', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.flag !== undefined) {
+                    document.getElementsByTagName("body")[0].setAttribute("class", "green");
+                    document.getElementsByTagName("form")[0].innerText = "You found the flag: " + data.flag;
+                } else {
+                    alert(data.hint);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+            return false;
+        });
+    </script>
+</body>
+</html>
