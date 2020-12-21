@@ -141,6 +141,13 @@ day21-up: day21-build
 	scp -r xmas-ftpd/data xmas:/home/ubuntu/data/day21/
 	sudo docker save day21 | pv | ssh xmas sudo docker load
 
+
+day24-build:
+	sudo docker build --tag day24 -f xmas-tcpflags/Dockerfile xmas-tcpflags
+
+day24-up: day24-build
+	sudo docker save day24 | pv | ssh xmas sudo docker load
+
 #####################################
 
 day01-restart:
