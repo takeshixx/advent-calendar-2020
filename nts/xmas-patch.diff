@@ -20,7 +20,7 @@ index cb4a2dfd3..fdf31ac18 100644
  				NTS_CRITICAL+nts_next_protocol_negotiation, nts_protocol_NTP);
 +
 +	/* 4.1.7 NTPv4 Server Negotiation */
-+	if(!nts_ntp4_server_negotiation_send(&buf))
++	if(!nts_ntp4_server_negotiation_send(buf))
 +		return false;
 +
  	/* 4.1.5 AEAD Algorithm List */

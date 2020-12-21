@@ -1,0 +1,13 @@
+version: '3'
+services:
+  chrony:
+    build: .
+    volumes:
+      - ./chrony.conf:/etc/chrony.conf:ro
+      - ../private:/etc/ssl/private:ro
+    read_only: false
+    privileged: true
+    cap_add:
+      - "SYS_TIME"
+    extra_hosts:
+      - "xmas.rip:172.17.0.1"
