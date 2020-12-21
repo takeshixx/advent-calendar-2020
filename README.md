@@ -52,6 +52,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[NTS](nts): [RFC 8915 - Network Time Security (NTS)](https://tools.ietf.org/html/rfc8915) server ([nts](nts))~~
 - [x] ~~[SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.~~
 - [x] ~~[HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.~~
+- [x] [Santa's Christmas Factory](./santas-christmas-factory) is a web server affected by JavaScript prototype pollution.
 
 ### Overall Challenge
 
