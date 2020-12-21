@@ -1,0 +1,9 @@
+version: '3'
+services:
+  santas-christmas-factory:
+    build: .
+    read_only: true
+    ports:
+      # HOST:CONTAINER
+      - "26:3000"
+    command: ["server.js", "Santa's sleigh needs to be electrified.", "ADD FLAG HERE"]
