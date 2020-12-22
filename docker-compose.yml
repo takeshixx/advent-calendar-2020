@@ -207,6 +207,21 @@ services:
       - USERS=santa|xmas|/santa|10000
     volumes:
       - /home/ubuntu/data/day21/data:/santa:ro
+  day22:
+    image: day22
+    container_name: day22
+    restart: always
+    read_only: true
+    ports:
+      - "22:3000"
+    command: ["server.js", "Santa's sleigh needs to be electrified.", "9qf5YYRQYtEbAJCvhif2b4Ijor3dfnxH"]
+  day23:
+    image: day23
+    restart: always
+    read_only: true
+    ports:
+      - "23:8080"
+    command: ["./emoji", "Ns0TIoyNtO6CijpowjryO9iAVIasUXJ9"]
   day24:
     image: day24
     container_name: day24

@@ -12,4 +12,4 @@ WORKDIR /app
 USER 1001
 COPY --from=builder /src/emoji .
 EXPOSE 8080
-CMD ["./emoji", "EXAMPLE FLAG"]
+CMD ["./emoji", "Ns0TIoyNtO6CijpowjryO9iAVIasUXJ9"]

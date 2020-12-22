@@ -51,8 +51,8 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[NTS](nts): [RFC 8915 - Network Time Security (NTS)](https://tools.ietf.org/html/rfc8915) server ([nts](nts))~~
 - [x] ~~[SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.~~
 - [x] ~~[HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.~~
-- [x] [Santa's Christmas Factory](./santas-christmas-factory) is a web server affected by JavaScript prototype pollution.
-- [ ] [Something with emojis](./emoji) is a small TCP server with a emoji "puzzle/quiz".
+- [x] ~~[Santa's Christmas Factory](./santas-christmas-factory) is a web server affected by JavaScript prototype pollution.~~
+- [ ] ~~[Something with emojis](./emoji) is a small TCP server with a emoji "puzzle/quiz".~~
 
 ### Overall Challenge
 
@@ -91,6 +91,6 @@ First one or two ports should be fairly simple to give participants an easy star
 | 19    | A HTTP/3-only server on UDP. | [http3only](http3only)
 | <ins>**20**</ins>    | CSP bypass challenge. | [santas-naughty-list](santas-naughty-list)
 | 21    | Simple FTP server with login and a secret file. | [xmas-ftpd](xmas-ftpd)
-| 22    | | []()
-| 23    | | []()
+| 22    | JavaScript type pollution challenge. | [Santa's Christmas Factory](./santas-christmas-factory)
+| 23    | TCP server with emoji puzzles/quizzes. | [Something with emojis](./emoji)
 | 24    | XMAS scan port that returns the token in a ICMP 13 packet. Can be solved with Nmap XMAS scan and Wireshark. | [xmas-tcpflags](xmas-tcpflags)

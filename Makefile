@@ -141,6 +141,17 @@ day21-up: day21-build
 	scp -r xmas-ftpd/data xmas:/home/ubuntu/data/day21/
 	sudo docker save day21 | pv | ssh xmas sudo docker load
 
+day22-build:
+	sudo docker build --tag day22 -f santas-christmas-factory/Dockerfile santas-christmas-factory
+
+day22-up: day22-build
+	sudo docker save day22 | pv | ssh xmas sudo docker load
+
+day23-build:
+	sudo docker build --tag day23 -f emoji/Dockerfile emoji
+
+day23-up: day23-build
+	sudo docker save day23 | pv | ssh xmas sudo docker load
 
 day24-build:
 	sudo docker build --tag day24 -f xmas-tcpflags/Dockerfile xmas-tcpflags
