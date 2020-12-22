@@ -52,7 +52,7 @@ Tick the boxes to indicate the service has been implemented. Strikethrough text 
 - [x] ~~[SANTAS NAUGHTY LIST](./santas-naughty-list) is using a strict Content Security Policy to protected against all(?) XSS attacks.~~
 - [x] ~~[HELLO XMAS/3.0](./http3only) is a HTTP/3.0 only server on UDP.~~
 - [x] ~~[Santa's Christmas Factory](./santas-christmas-factory) is a web server affected by JavaScript prototype pollution.~~
-- [ ] ~~[Something with emojis](./emoji) is a small TCP server with a emoji "puzzle/quiz".~~
+- [x] ~~[Something with emojis](./emoji) is a small TCP server with a emoji "puzzle/quiz".~~
 
 ### Overall Challenge
 
