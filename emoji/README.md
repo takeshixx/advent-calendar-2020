@@ -49,4 +49,4 @@ Start server:
 The quiz has three steps:
 - in the first step you need to send the emoji same as the received emoji
 - the second step is a scissors stone paper game with emojis
-- in the third step you need to guess to correct XMAS emojis (TODO: currently work in progress)
+- in the third step you need to guess to correct XMAS emoji sequence. Possible emojis are: 🎅🎄☃️🎁❄️⛄🎍🛷🦌🤶

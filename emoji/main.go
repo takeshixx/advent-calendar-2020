@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"log"
 	"math/rand"
@@ -9,6 +10,8 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"github.com/rivo/uniseg"
 )
 
 const port = 8080
@@ -32,8 +35,6 @@ func (e *emojiConnectionHandler) readString() (line string, success bool) {
 
 func (e *emojiConnectionHandler) handleConnection() {
 	fmt.Printf("Serving %s\n", e.c.RemoteAddr().String())
-
-	e.quiz()
 
 	success := e.welcome() &&
 		e.scissorsStonePaper() &&
@@ -107,6 +108,9 @@ func (e *emojiConnectionHandler) scissorsStonePaper() bool {
 
 func (e *emojiConnectionHandler) quiz() bool {
 	success := true
+
+	e.printLn("❓❓❓❓❓❓❓❓")
+	// Randomly generate correct answer:
 	emojis := []string{
 		"🎅",
 		"🎄",
@@ -119,10 +123,11 @@ func (e *emojiConnectionHandler) quiz() bool {
 		"🦌",
 		"🤶",
 	}
-	var answer [8]string
-	for i := 0; i < len(answer); i++ {
-		answer[i] = emojis[rand.Intn(len(emojis))]
+	ab := strings.Builder{}
+	for i := 0; i < 8; i++ {
+		ab.WriteString(emojis[rand.Intn(len(emojis))])
 	}
+	answerGr := uniseg.NewGraphemes(ab.String())
 
 	for {
 		var input string
@@ -131,23 +136,25 @@ func (e *emojiConnectionHandler) quiz() bool {
 			break
 		}
 
-		var check [len(answer)]string
+		inputGr := uniseg.NewGraphemes(input)
+		answerGr.Reset()
 		correctAnswer := true
-		for i := 0; i < len(answer); i++ {
-			// This code is wrong atm, see https://stackoverflow.com/a/12668840/2073799
-			e.printLn(fmt.Sprintf("%d", len(answer[i])))
-			if len(input) > i && string(input[i]) == answer[i] {
-				check[i] = answer[i]
+		output := strings.Builder{}
+		for answerGr.Next() {
+			hasNext := inputGr.Next()
+			if hasNext && bytes.Equal(answerGr.Bytes(), inputGr.Bytes()) {
+				output.WriteString(answerGr.Str())
 			} else {
-				check[i] = "🚫"
+				output.WriteString("🚫")
 				correctAnswer = false
 			}
 		}
+
 		if correctAnswer {
 			break
 		}
 
-		success = e.printLn(strings.Join(check[:], ""))
+		success = e.printLn(output.String())
 		if !success {
 			break
 		}
