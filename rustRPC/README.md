@@ -20,3 +20,7 @@ Run the XmasClient
 ```bash
 ./XmasClient --server_addr xmas.rip:xx --secret "XMAS"
 ```
+
+## Hint
+
+Newest version of https://github.com/google/tarpc/
