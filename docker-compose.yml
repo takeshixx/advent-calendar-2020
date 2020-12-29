@@ -227,3 +227,4 @@ services:
     container_name: day24
     restart: always
     network_mode: host
+    command: ["/srv/bin/server", "ens3"]
